@@ -1,0 +1,126 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+JaiGuruDevTrading
+</name>
+</assembly>
+<members>
+<member name="T:JaiGuruDevTrading.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_about_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_bill_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_bill_30">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_billing_machine_50">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_exit_30px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_grip_lines_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_grip_lines_32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_info_30px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_minus_24">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_minus_24__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_paid_bill_50">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_payroll_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_payroll_64px_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_person_64">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_sign_out_26">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.icons8_warehouse_50px_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JaiGuruDevTrading.My.Resources.Resources.wp3476675">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
