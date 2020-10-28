@@ -5,17 +5,16 @@ Module DbFunctions
     Dim entry_status As String = "NULL"
     Public Sub MakeLogEntry()
         '<----------------------------->
-
         Dim name As String = Dns.GetHostName
-            Dim hname As IPHostEntry = Dns.GetHostByName(name)
-            Dim ip As IPAddress() = hname.AddressList
-            '<----------------------------->
-            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
-            Dim time As String = Format(Now, "hh:mm:ss tt")
+        Dim hname As IPHostEntry = Dns.GetHostByName(name)
+        Dim ip As IPAddress() = hname.AddressList
+        '<----------------------------->
+        Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+        Dim time As String = Format(Now, "hh:mm:ss tt")
         Dim reader As MySqlDataReader
-        '''''''''''''''''''''
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         val() 'Checking If HOST Already Present IN logs Table If Yes return True Else Remain NULL
-        ''''''''''''''''''''''
+        '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
         If entry_status = "NULL" Then
             con.Close()
             con.Open()
@@ -58,5 +57,27 @@ Module DbFunctions
             entry_status = "True"
         End If
     End Sub
+    Public Sub logout()
+        val()
+        If entry_status = "True" Then
+            Dim name As String = Dns.GetHostName
+            Dim hname As IPHostEntry = Dns.GetHostByName(name)
+            Dim ip As IPAddress() = hname.AddressList
+            Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+            Dim time As String = Format(Now, "hh:mm:ss tt")
+            Dim reader As MySqlDataReader
+            con.Close()
+            con.Open()
+            Try
+                Dim cmd As MySqlCommand = New MySqlCommand("UPDATE logs SET last_logout_date = '" & todaysdate & "' , last_logout_time = '" & time & "' WHERE log_pc='" & name & "'", con)
+                reader = cmd.ExecuteReader()
+                con.Close()
+            Catch ex As MySqlException
+                MsgBox("error", ex.Message)
+                con.Close()
+            End Try
+        End If
+    End Sub
+
 
 End Module

@@ -17,6 +17,7 @@ Module loginValidation
             DbFunctions.MakeLogEntry()
             Form1.usrname.Text = User_Login.UsernameTextBox.Text
             Form1.Show()
+            User_Login.Close()
         Else
             MsgBox("Invalid Credentials", MsgBoxStyle.Critical)
         End If

@@ -177,10 +177,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="AdminSection\AdminAuth.Designer.vb">
+      <DependentUpon>AdminAuth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminAuth.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="DevelopersSection\DevelopersAuth.Designer.vb">
+      <DependentUpon>DevelopersAuth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DevelopersSection\DevelopersAuth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Initial Screens\Splash Screen\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Initial Screens\Splash Screen\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -188,12 +206,6 @@
       <DependentUpon>User Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Initial Screens\LoginScreen\User Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Initial Screens\Splash Screen\LogoInfo.Designer.vb">
-      <DependentUpon>LogoInfo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Initial Screens\Splash Screen\LogoInfo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\DbFunctions.vb" />
@@ -217,7 +229,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="AdminSection\AdminAuth.resx">
+      <DependentUpon>AdminAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevelopersSection\DevelopersAuth.resx">
+      <DependentUpon>DevelopersAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Initial Screens\Splash Screen\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Initial Screens\LoginScreen\User Login.en-IN.resx">
@@ -228,9 +249,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Initial Screens\LoginScreen\User Login.resx">
       <DependentUpon>User Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Initial Screens\Splash Screen\LogoInfo.resx">
-      <DependentUpon>LogoInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -283,6 +301,16 @@
     <None Include="Resources\wp3476675.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_person_64px.png" />
+    <None Include="Resources\icons8_User_Group_2_24px.png" />
+    <None Include="Resources\icons8_increase_32px.png" />
+    <None Include="Resources\icons8_financial_analytics_128px.png" />
+    <None Include="Resources\icons8_rounded_rectangle_stroked_32px.png" />
+    <None Include="Resources\icons8_admin_settings_male_24px.png" />
+    <None Include="Resources\icons8_macbook_settings_24px.png" />
+    <None Include="Resources\icons8_admin_settings_male_50px_1.png" />
+    <None Include="Resources\icons8_admin_settings_male_50px.png" />
+    <None Include="Resources\icons8_Voucher_24px.png" />
     <None Include="Resources\icons8_payroll_24px.png" />
     <None Include="Resources\icons8_payroll_50px.png" />
     <None Include="Resources\icons8_trolley_24px.png" />
@@ -302,6 +330,9 @@
     <None Include="Resources\icons8-paid-bill-50.png" />
     <None Include="Resources\icons8-minus-24 %281%29.png" />
     <None Include="Resources\icons8-multiply-24 %281%29.png" />
+    <None Include="Resources\background.JPG" />
+    <None Include="Resources\BG.JPG" />
+    <None Include="Resources\BG2.jpg" />
     <Content Include="Resources\icons8-person-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

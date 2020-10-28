@@ -10,7 +10,6 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\ob
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.pdb
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.resources
-C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.LogoInfo.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.exe.config
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.en-IN.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.hi.resources
@@ -97,3 +96,6 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bi
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.DevelopersAuth.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.AdminAuth.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.SplashScreen.resources

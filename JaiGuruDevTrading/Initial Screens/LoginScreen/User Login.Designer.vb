@@ -14,13 +14,6 @@ Partial Class User_Login
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
-    Friend WithEvents UsernameLabel As System.Windows.Forms.Label
-    Friend WithEvents PasswordLabel As System.Windows.Forms.Label
-    Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents PasswordTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents OK As System.Windows.Forms.Button
-    Friend WithEvents Cancel As System.Windows.Forms.Button
 
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
@@ -31,50 +24,40 @@ Partial Class User_Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_Login))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
-        Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.PasswordLabel = New System.Windows.Forms.Label()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.OK = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Cancel = New System.Windows.Forms.Button()
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'LogoPictureBox
+        'Panel2
         '
-        resources.ApplyResources(Me.LogoPictureBox, "LogoPictureBox")
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.TabStop = False
+        Me.Panel2.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.BG
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.Cancel)
+        Me.Panel2.Controls.Add(Me.OK)
+        Me.Panel2.Controls.Add(Me.PasswordTextBox)
+        Me.Panel2.Controls.Add(Me.UsernameTextBox)
+        Me.Panel2.Controls.Add(Me.PasswordLabel)
+        Me.Panel2.Controls.Add(Me.UsernameLabel)
+        resources.ApplyResources(Me.Panel2, "Panel2")
+        Me.Panel2.Name = "Panel2"
         '
-        'UsernameLabel
+        'PictureBox1
         '
-        Me.UsernameLabel.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.UsernameLabel, "UsernameLabel")
-        Me.UsernameLabel.Name = "UsernameLabel"
-        '
-        'PasswordLabel
-        '
-        Me.PasswordLabel.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.PasswordLabel, "PasswordLabel")
-        Me.PasswordLabel.Name = "PasswordLabel"
-        '
-        'UsernameTextBox
-        '
-        resources.ApplyResources(Me.UsernameTextBox, "UsernameTextBox")
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        '
-        'PasswordTextBox
-        '
-        resources.ApplyResources(Me.PasswordTextBox, "PasswordTextBox")
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        '
-        'OK
-        '
-        Me.OK.FlatAppearance.BorderSize = 0
-        Me.OK.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.OK, "OK")
-        Me.OK.Name = "OK"
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_person_64
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'Cancel
         '
@@ -83,29 +66,72 @@ Partial Class User_Login
         resources.ApplyResources(Me.Cancel, "Cancel")
         Me.Cancel.Name = "Cancel"
         '
+        'OK
+        '
+        Me.OK.FlatAppearance.BorderSize = 0
+        Me.OK.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.OK, "OK")
+        Me.OK.Name = "OK"
+        '
+        'PasswordTextBox
+        '
+        resources.ApplyResources(Me.PasswordTextBox, "PasswordTextBox")
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        '
+        'UsernameTextBox
+        '
+        resources.ApplyResources(Me.UsernameTextBox, "UsernameTextBox")
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        '
+        'PasswordLabel
+        '
+        Me.PasswordLabel.BackColor = System.Drawing.Color.Transparent
+        Me.PasswordLabel.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.PasswordLabel, "PasswordLabel")
+        Me.PasswordLabel.Name = "PasswordLabel"
+        '
+        'UsernameLabel
+        '
+        Me.UsernameLabel.BackColor = System.Drawing.Color.Transparent
+        Me.UsernameLabel.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.UsernameLabel, "UsernameLabel")
+        Me.UsernameLabel.Name = "UsernameLabel"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'User_Login
         '
-        Me.AcceptButton = Me.OK
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.CancelButton = Me.Cancel
-        Me.Controls.Add(Me.Cancel)
-        Me.Controls.Add(Me.OK)
-        Me.Controls.Add(Me.PasswordTextBox)
-        Me.Controls.Add(Me.UsernameTextBox)
-        Me.Controls.Add(Me.PasswordLabel)
-        Me.Controls.Add(Me.UsernameLabel)
-        Me.Controls.Add(Me.LogoPictureBox)
+        Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "User_Login"
+        Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Cancel As Button
+    Friend WithEvents OK As Button
+    Friend WithEvents PasswordTextBox As TextBox
+    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents PasswordLabel As Label
+    Friend WithEvents UsernameLabel As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class

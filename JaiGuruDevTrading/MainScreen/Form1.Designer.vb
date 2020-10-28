@@ -24,41 +24,46 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Btn_Logout = New System.Windows.Forms.Button()
-        Me.Btn_info = New System.Windows.Forms.Button()
-        Me.Btn_Payroll = New System.Windows.Forms.Button()
-        Me.Btn_Inven = New System.Windows.Forms.Button()
-        Me.Btn_Acc = New System.Windows.Forms.Button()
-        Me.Btn_Bill = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Accounts = New System.Windows.Forms.Panel()
+        Me.PannelBill = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Content = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Btn_Gst = New System.Windows.Forms.Button()
         Me.Btn_deb = New System.Windows.Forms.Button()
         Me.Btn_BS = New System.Windows.Forms.Button()
         Me.Btn_ledger = New System.Windows.Forms.Button()
         Me.Btn_journal = New System.Windows.Forms.Button()
-        Me.PannelBill = New System.Windows.Forms.Panel()
         Me.Btn_challan = New System.Windows.Forms.Button()
         Me.RetailBtn = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.pc_name = New System.Windows.Forms.Label()
         Me.usrname = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Content = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.Btn_Logout = New System.Windows.Forms.Button()
+        Me.Btn_info = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_Analytics = New System.Windows.Forms.Button()
+        Me.Btn_Payroll = New System.Windows.Forms.Button()
+        Me.Btn_vouch = New System.Windows.Forms.Button()
+        Me.Btn_Inven = New System.Windows.Forms.Button()
+        Me.Btn_Acc = New System.Windows.Forms.Button()
+        Me.Btn_Bill = New System.Windows.Forms.Button()
+        Me.Btn_User = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Accounts.SuspendLayout()
         Me.PannelBill.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Content.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -67,101 +72,20 @@ Partial Class Form1
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Btn_Logout)
         Me.Panel1.Controls.Add(Me.Btn_info)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Btn_User)
+        Me.Panel1.Controls.Add(Me.Btn_Analytics)
         Me.Panel1.Controls.Add(Me.Btn_Payroll)
+        Me.Panel1.Controls.Add(Me.Btn_vouch)
         Me.Panel1.Controls.Add(Me.Btn_Inven)
         Me.Panel1.Controls.Add(Me.Btn_Acc)
         Me.Panel1.Controls.Add(Me.Btn_Bill)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(106, 504)
+        Me.Panel1.Size = New System.Drawing.Size(110, 504)
         Me.Panel1.TabIndex = 3
-        '
-        'Btn_Logout
-        '
-        Me.Btn_Logout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Logout.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_exit_30px
-        Me.Btn_Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Logout.FlatAppearance.BorderSize = 0
-        Me.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Logout.Location = New System.Drawing.Point(5, 463)
-        Me.Btn_Logout.Name = "Btn_Logout"
-        Me.Btn_Logout.Size = New System.Drawing.Size(100, 26)
-        Me.Btn_Logout.TabIndex = 3
-        Me.Btn_Logout.Text = "     Logout"
-        Me.Btn_Logout.UseVisualStyleBackColor = True
-        '
-        'Btn_info
-        '
-        Me.Btn_info.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Btn_info.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_info_30px
-        Me.Btn_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_info.FlatAppearance.BorderSize = 0
-        Me.Btn_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_info.Location = New System.Drawing.Point(3, 430)
-        Me.Btn_info.Name = "Btn_info"
-        Me.Btn_info.Size = New System.Drawing.Size(102, 29)
-        Me.Btn_info.TabIndex = 3
-        Me.Btn_info.Text = "Info"
-        Me.Btn_info.UseVisualStyleBackColor = True
-        '
-        'Btn_Payroll
-        '
-        Me.Btn_Payroll.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_payroll_24px
-        Me.Btn_Payroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Payroll.FlatAppearance.BorderSize = 0
-        Me.Btn_Payroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Payroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Payroll.Location = New System.Drawing.Point(6, 133)
-        Me.Btn_Payroll.Name = "Btn_Payroll"
-        Me.Btn_Payroll.Size = New System.Drawing.Size(97, 29)
-        Me.Btn_Payroll.TabIndex = 3
-        Me.Btn_Payroll.Text = "    Payroll"
-        Me.Btn_Payroll.UseVisualStyleBackColor = True
-        '
-        'Btn_Inven
-        '
-        Me.Btn_Inven.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
-        Me.Btn_Inven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Inven.FlatAppearance.BorderSize = 0
-        Me.Btn_Inven.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Inven.Location = New System.Drawing.Point(5, 93)
-        Me.Btn_Inven.Name = "Btn_Inven"
-        Me.Btn_Inven.Size = New System.Drawing.Size(98, 29)
-        Me.Btn_Inven.TabIndex = 3
-        Me.Btn_Inven.Text = "        Inventory"
-        Me.Btn_Inven.UseVisualStyleBackColor = True
-        '
-        'Btn_Acc
-        '
-        Me.Btn_Acc.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_bill_30
-        Me.Btn_Acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Acc.FlatAppearance.BorderSize = 0
-        Me.Btn_Acc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Acc.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Btn_Acc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Acc.Location = New System.Drawing.Point(-1, 51)
-        Me.Btn_Acc.Name = "Btn_Acc"
-        Me.Btn_Acc.Size = New System.Drawing.Size(104, 29)
-        Me.Btn_Acc.TabIndex = 3
-        Me.Btn_Acc.Text = "           Accounts"
-        Me.Btn_Acc.UseVisualStyleBackColor = True
-        '
-        'Btn_Bill
-        '
-        Me.Btn_Bill.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_bill_30
-        Me.Btn_Bill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Btn_Bill.FlatAppearance.BorderSize = 0
-        Me.Btn_Bill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Bill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Bill.Location = New System.Drawing.Point(5, 12)
-        Me.Btn_Bill.Name = "Btn_Bill"
-        Me.Btn_Bill.Size = New System.Drawing.Size(96, 29)
-        Me.Btn_Bill.TabIndex = 3
-        Me.Btn_Bill.Text = "Bills"
-        Me.Btn_Bill.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -171,7 +95,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.PannelBill)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(106, 0)
+        Me.Panel2.Location = New System.Drawing.Point(110, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(206, 504)
         Me.Panel2.TabIndex = 4
@@ -183,10 +107,53 @@ Partial Class Form1
         Me.Accounts.Controls.Add(Me.Btn_BS)
         Me.Accounts.Controls.Add(Me.Btn_ledger)
         Me.Accounts.Controls.Add(Me.Btn_journal)
-        Me.Accounts.Location = New System.Drawing.Point(-1, 219)
+        Me.Accounts.Location = New System.Drawing.Point(0, 219)
         Me.Accounts.Name = "Accounts"
-        Me.Accounts.Size = New System.Drawing.Size(205, 272)
+        Me.Accounts.Size = New System.Drawing.Size(205, 181)
         Me.Accounts.TabIndex = 8
+        '
+        'PannelBill
+        '
+        Me.PannelBill.Controls.Add(Me.Btn_challan)
+        Me.PannelBill.Controls.Add(Me.RetailBtn)
+        Me.PannelBill.Location = New System.Drawing.Point(0, 100)
+        Me.PannelBill.Name = "PannelBill"
+        Me.PannelBill.Size = New System.Drawing.Size(204, 113)
+        Me.PannelBill.TabIndex = 11
+        '
+        'Timer1
+        '
+        '
+        'Content
+        '
+        Me.Content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Content.Controls.Add(Me.Panel4)
+        Me.Content.Controls.Add(Me.Panel3)
+        Me.Content.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Content.Location = New System.Drawing.Point(110, 0)
+        Me.Content.Name = "Content"
+        Me.Content.Size = New System.Drawing.Size(630, 504)
+        Me.Content.TabIndex = 5
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(4, Byte), Integer), CType(CType(89, Byte), Integer))
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(0, 32)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(628, 17)
+        Me.Panel4.TabIndex = 7
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.Button3)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(628, 32)
+        Me.Panel3.TabIndex = 6
         '
         'Btn_Gst
         '
@@ -267,15 +234,6 @@ Partial Class Form1
         Me.Btn_journal.TabIndex = 0
         Me.Btn_journal.Text = "Journal"
         Me.Btn_journal.UseVisualStyleBackColor = True
-        '
-        'PannelBill
-        '
-        Me.PannelBill.Controls.Add(Me.Btn_challan)
-        Me.PannelBill.Controls.Add(Me.RetailBtn)
-        Me.PannelBill.Location = New System.Drawing.Point(0, 100)
-        Me.PannelBill.Name = "PannelBill"
-        Me.PannelBill.Size = New System.Drawing.Size(204, 113)
-        Me.PannelBill.TabIndex = 11
         '
         'Btn_challan
         '
@@ -361,47 +319,13 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'Timer1
-        '
-        '
-        'Content
-        '
-        Me.Content.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Content.Controls.Add(Me.Panel4)
-        Me.Content.Controls.Add(Me.Panel3)
-        Me.Content.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Content.Location = New System.Drawing.Point(106, 0)
-        Me.Content.Name = "Content"
-        Me.Content.Size = New System.Drawing.Size(634, 504)
-        Me.Content.TabIndex = 5
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(4, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 32)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(632, 17)
-        Me.Panel4.TabIndex = 7
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(73, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Controls.Add(Me.Button3)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(632, 32)
-        Me.Panel3.TabIndex = 6
-        '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(606, 3)
+        Me.Button2.Location = New System.Drawing.Point(602, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(21, 22)
         Me.Button2.TabIndex = 1
@@ -414,11 +338,168 @@ Partial Class Form1
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_minus_24__1_
-        Me.Button3.Location = New System.Drawing.Point(579, 3)
+        Me.Button3.Location = New System.Drawing.Point(575, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(21, 23)
         Me.Button3.TabIndex = 1
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Btn_Logout
+        '
+        Me.Btn_Logout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Logout.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_exit_30px
+        Me.Btn_Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Logout.FlatAppearance.BorderSize = 0
+        Me.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Logout.Location = New System.Drawing.Point(5, 465)
+        Me.Btn_Logout.Name = "Btn_Logout"
+        Me.Btn_Logout.Size = New System.Drawing.Size(96, 26)
+        Me.Btn_Logout.TabIndex = 3
+        Me.Btn_Logout.Text = "     Logout"
+        Me.Btn_Logout.UseVisualStyleBackColor = True
+        '
+        'Btn_info
+        '
+        Me.Btn_info.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Btn_info.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_info_30px
+        Me.Btn_info.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_info.FlatAppearance.BorderSize = 0
+        Me.Btn_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_info.Location = New System.Drawing.Point(3, 432)
+        Me.Btn_info.Name = "Btn_info"
+        Me.Btn_info.Size = New System.Drawing.Size(98, 29)
+        Me.Btn_info.TabIndex = 3
+        Me.Btn_info.Text = "Info"
+        Me.Btn_info.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button4.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_admin_settings_male_24px
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(4, 360)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(101, 25)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "Admin Control"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_macbook_settings_24px
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button1.Location = New System.Drawing.Point(5, 394)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(96, 39)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "       Developers       Section"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Btn_Analytics
+        '
+        Me.Btn_Analytics.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_increase_32px
+        Me.Btn_Analytics.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Analytics.FlatAppearance.BorderSize = 0
+        Me.Btn_Analytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Analytics.Location = New System.Drawing.Point(4, 203)
+        Me.Btn_Analytics.Name = "Btn_Analytics"
+        Me.Btn_Analytics.Size = New System.Drawing.Size(101, 29)
+        Me.Btn_Analytics.TabIndex = 3
+        Me.Btn_Analytics.Text = "       Analytics"
+        Me.Btn_Analytics.UseVisualStyleBackColor = True
+        '
+        'Btn_Payroll
+        '
+        Me.Btn_Payroll.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_payroll_24px
+        Me.Btn_Payroll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Payroll.FlatAppearance.BorderSize = 0
+        Me.Btn_Payroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Payroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Payroll.Location = New System.Drawing.Point(4, 168)
+        Me.Btn_Payroll.Name = "Btn_Payroll"
+        Me.Btn_Payroll.Size = New System.Drawing.Size(97, 29)
+        Me.Btn_Payroll.TabIndex = 3
+        Me.Btn_Payroll.Text = "    Payroll"
+        Me.Btn_Payroll.UseVisualStyleBackColor = True
+        '
+        'Btn_vouch
+        '
+        Me.Btn_vouch.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_Voucher_24px
+        Me.Btn_vouch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_vouch.FlatAppearance.BorderSize = 0
+        Me.Btn_vouch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_vouch.Location = New System.Drawing.Point(3, 91)
+        Me.Btn_vouch.Name = "Btn_vouch"
+        Me.Btn_vouch.Size = New System.Drawing.Size(98, 29)
+        Me.Btn_vouch.TabIndex = 3
+        Me.Btn_vouch.Text = "        Vouchers"
+        Me.Btn_vouch.UseVisualStyleBackColor = True
+        '
+        'Btn_Inven
+        '
+        Me.Btn_Inven.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
+        Me.Btn_Inven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Inven.FlatAppearance.BorderSize = 0
+        Me.Btn_Inven.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Inven.Location = New System.Drawing.Point(3, 128)
+        Me.Btn_Inven.Name = "Btn_Inven"
+        Me.Btn_Inven.Size = New System.Drawing.Size(98, 29)
+        Me.Btn_Inven.TabIndex = 3
+        Me.Btn_Inven.Text = "        Inventory"
+        Me.Btn_Inven.UseVisualStyleBackColor = True
+        '
+        'Btn_Acc
+        '
+        Me.Btn_Acc.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_bill_30
+        Me.Btn_Acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Acc.FlatAppearance.BorderSize = 0
+        Me.Btn_Acc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Acc.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
+        Me.Btn_Acc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Acc.Location = New System.Drawing.Point(-1, 51)
+        Me.Btn_Acc.Name = "Btn_Acc"
+        Me.Btn_Acc.Size = New System.Drawing.Size(104, 29)
+        Me.Btn_Acc.TabIndex = 3
+        Me.Btn_Acc.Text = "          Accounts"
+        Me.Btn_Acc.UseVisualStyleBackColor = True
+        '
+        'Btn_Bill
+        '
+        Me.Btn_Bill.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_bill_30
+        Me.Btn_Bill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_Bill.FlatAppearance.BorderSize = 0
+        Me.Btn_Bill.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Bill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Bill.Location = New System.Drawing.Point(5, 12)
+        Me.Btn_Bill.Name = "Btn_Bill"
+        Me.Btn_Bill.Size = New System.Drawing.Size(96, 29)
+        Me.Btn_Bill.TabIndex = 3
+        Me.Btn_Bill.Text = "Bills"
+        Me.Btn_Bill.UseVisualStyleBackColor = True
+        '
+        'Btn_User
+        '
+        Me.Btn_User.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_User_Group_2_24px
+        Me.Btn_User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_User.FlatAppearance.BorderSize = 0
+        Me.Btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_User.Location = New System.Drawing.Point(4, 239)
+        Me.Btn_User.Name = "Btn_User"
+        Me.Btn_User.Size = New System.Drawing.Size(105, 29)
+        Me.Btn_User.TabIndex = 3
+        Me.Btn_User.Text = "         Active User"
+        Me.Btn_User.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -438,11 +519,11 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Accounts.ResumeLayout(False)
         Me.PannelBill.ResumeLayout(False)
+        Me.Content.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Content.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -474,4 +555,9 @@ Partial Class Form1
     Friend WithEvents Btn_Payroll As Button
     Friend WithEvents Btn_info As Button
     Friend WithEvents Btn_Logout As Button
+    Friend WithEvents Btn_vouch As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Btn_Analytics As Button
+    Friend WithEvents Btn_User As Button
 End Class

@@ -5,7 +5,6 @@ Public Class Form1
     Dim pannelWidth
     Dim notHidden As String
     '<-----------Pannel Style------------>
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pc_name.Text = IPView()
         pannelWidth = Panel2.Width
@@ -45,14 +44,6 @@ Public Class Form1
         Accounts.Hide()
     End Sub
 
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Application.Exit()
-    End Sub
-
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.WindowState = FormWindowState.Minimized
-
-    End Sub
 
     Private Sub Btn_Acc_Click(sender As Object, e As EventArgs) Handles Btn_Acc.Click
         Panel2.Show()
@@ -62,20 +53,7 @@ Public Class Form1
         Accounts.Dock = DockStyle.Fill
     End Sub
 
-    Private Sub RetailBtn_MouseEnter(sender As Object, e As EventArgs) Handles RetailBtn.MouseEnter
-        RetailBtn.ForeColor = Color.Purple
-    End Sub
 
-    Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs) Handles RetailBtn.MouseLeave
-        RetailBtn.ForeColor = Color.Black
-    End Sub
-
-    Private Sub Btn_journal_MouseEnter(sender As Object, e As EventArgs) Handles Btn_journal.MouseEnter
-        Btn_journal.ForeColor = Color.Purple
-    End Sub
-    Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs) Handles Btn_journal.MouseLeave
-        Btn_journal.ForeColor = Color.Black
-    End Sub
     Public Sub DoubleBufferedPanel(ByVal myPanel As Panel, ByVal setting As Boolean)
         Dim panType As Type = myPanel.[GetType]()
         Dim pi As PropertyInfo = panType.GetProperty("DoubleBuffered", BindingFlags.Instance Or BindingFlags.NonPublic)
@@ -87,7 +65,12 @@ Public Class Form1
         pi.SetValue(myPanel, setting, Nothing)
     End Sub
     Private Sub Btn_Logout_Click(sender As Object, e As EventArgs) Handles Btn_Logout.Click
-        'logout()
+        logout()
+        DevelopersAuth.Close()
+        User_Login.Show()
+        User_Login.UsernameTextBox.Text = Nothing
+        User_Login.PasswordTextBox.Text = Nothing
+        Me.Close()
     End Sub
 
     Private Sub Btn_Bill_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Bill.MouseEnter
@@ -113,11 +96,11 @@ Public Class Form1
     Private Sub Btn_Inven_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Inven.MouseEnter
         Btn_Inven.ForeColor = Color.Purple
     End Sub
-    Private Sub Btn_Payroll_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseEnter
+    Private Sub Btn_Payroll_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseEnter, Button1.MouseEnter, Button4.MouseEnter, Btn_Analytics.MouseEnter, Btn_User.MouseEnter
         Btn_Payroll.ForeColor = Color.Purple
     End Sub
 
-    Private Sub Btn_Payroll_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseLeave
+    Private Sub Btn_Payroll_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseLeave, Button1.MouseLeave, Button4.MouseLeave, Btn_Analytics.MouseLeave, Btn_User.MouseLeave
         Btn_Payroll.ForeColor = Color.Black
     End Sub
     Private Sub Btn_info_MouseLeave(sender As Object, e As EventArgs) Handles Btn_info.MouseLeave
@@ -172,6 +155,44 @@ Public Class Form1
 
     Private Sub Btn_Gst_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Gst.MouseLeave
         Btn_Gst.ForeColor = Color.Black
+    End Sub
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        logout()
+        Application.Exit()
+    End Sub
 
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+    Private Sub RetailBtn_MouseEnter(sender As Object, e As EventArgs) Handles RetailBtn.MouseEnter
+        RetailBtn.ForeColor = Color.Purple
+    End Sub
+
+    Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs) Handles RetailBtn.MouseLeave
+        RetailBtn.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_journal_MouseEnter(sender As Object, e As EventArgs) Handles Btn_journal.MouseEnter
+        Btn_journal.ForeColor = Color.Purple
+    End Sub
+    Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs) Handles Btn_journal.MouseLeave
+        Btn_journal.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_vouch_MouseEnter(sender As Object, e As EventArgs) Handles Btn_vouch.MouseEnter
+        Btn_vouch.ForeColor = Color.Purple
+    End Sub
+
+    Private Sub Btn_vouch_MouseLeave(sender As Object, e As EventArgs) Handles Btn_vouch.MouseLeave
+        Btn_vouch.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        AdminAuth.Close()
+        DevelopersAuth.Show()
+    End Sub
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        DevelopersAuth.Close()
+        AdminAuth.Show()
     End Sub
 End Class

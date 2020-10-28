@@ -1,14 +1,14 @@
 Imports MySql.Data.MySqlClient
 Public Class User_Login
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+    Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
         Validate1()
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         Me.Close()
     End Sub
 
-    Private Sub User_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Application.Exit()
     End Sub
 End Class
