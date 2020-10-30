@@ -25,6 +25,8 @@ Partial Class User_Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_Login))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.OK = New System.Windows.Forms.Button()
@@ -32,14 +34,14 @@ Partial Class User_Login
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
-        Me.Panel2.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.BG
+        Me.Panel2.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.backgroundClient1
+        Me.Panel2.Controls.Add(Me.LinkLabel1)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Cancel)
@@ -50,6 +52,24 @@ Partial Class User_Login
         Me.Panel2.Controls.Add(Me.UsernameLabel)
         resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
+        '
+        'LinkLabel1
+        '
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.TabStop = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -97,15 +117,6 @@ Partial Class User_Login
         resources.ApplyResources(Me.UsernameLabel, "UsernameLabel")
         Me.UsernameLabel.Name = "UsernameLabel"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'User_Login
         '
         resources.ApplyResources(Me, "$this")
@@ -134,4 +145,5 @@ Partial Class User_Login
     Friend WithEvents UsernameLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

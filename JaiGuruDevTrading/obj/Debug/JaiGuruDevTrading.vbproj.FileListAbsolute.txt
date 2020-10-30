@@ -99,3 +99,5 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\ob
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.DevelopersAuth.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.AdminAuth.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.SplashScreen.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Forgot_password.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.UserCreationvb.resources

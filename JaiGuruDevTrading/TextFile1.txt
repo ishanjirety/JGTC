@@ -1,0 +1,6 @@
+﻿Additions 29-10-2020
+	password showing 
+	Splash Screen Logo Addition
+
+	30-10-2020 08:11 PM
+	was doing user registeration function created in DB functions code remaining

@@ -32,12 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.JaiGuruDevTrading.User_Login
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
-        Protected Overrides Sub OnCreateSplashScreen()
-            Me.SplashScreen = Global.JaiGuruDevTrading.SplashScreen
+            Me.MainForm = Global.JaiGuruDevTrading.UserCreationvb
         End Sub
     End Class
 End Namespace

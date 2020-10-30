@@ -24,20 +24,19 @@ Partial Class DevelopersAuth
     Private Sub InitializeComponent()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Btn_validate = New System.Windows.Forms.Button()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(123, Byte), Integer), CType(CType(4, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 32)
         Me.Panel4.Name = "Panel4"
@@ -46,7 +45,7 @@ Partial Class DevelopersAuth
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(73, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(107, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Button2)
@@ -55,37 +54,6 @@ Partial Class DevelopersAuth
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(421, 32)
         Me.Panel3.TabIndex = 8
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Btn_validate)
-        Me.Panel1.Controls.Add(Me.MaskedTextBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 49)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(421, 100)
-        Me.Panel1.TabIndex = 10
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(205, 36)
-        Me.MaskedTextBox1.Mask = "000-00-0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(126, 24)
-        Me.MaskedTextBox1.TabIndex = 13
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(106, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Enter Auth Code"
         '
         'Label2
         '
@@ -110,6 +78,19 @@ Partial Class DevelopersAuth
         Me.Button2.TabIndex = 1
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Btn_validate)
+        Me.Panel1.Controls.Add(Me.MaskedTextBox1)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 49)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(421, 100)
+        Me.Panel1.TabIndex = 10
+        '
         'Btn_validate
         '
         Me.Btn_validate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -120,6 +101,25 @@ Partial Class DevelopersAuth
         Me.Btn_validate.TabIndex = 15
         Me.Btn_validate.Text = "Validate"
         Me.Btn_validate.UseVisualStyleBackColor = True
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(205, 36)
+        Me.MaskedTextBox1.Mask = "000-00-0000"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(126, 24)
+        Me.MaskedTextBox1.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(106, 43)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(85, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Enter Auth Code"
         '
         'DevelopersAuth
         '

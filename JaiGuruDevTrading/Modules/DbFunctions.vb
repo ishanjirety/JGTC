@@ -78,6 +78,8 @@ Module DbFunctions
             End Try
         End If
     End Sub
+    Function registeration(ByVal cipher As String)
 
+    End Function
 
 End Module

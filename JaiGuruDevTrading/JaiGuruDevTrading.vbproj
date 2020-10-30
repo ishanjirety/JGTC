@@ -183,10 +183,22 @@
     <Compile Include="AdminSection\AdminAuth.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CreateUser\UserCreationvb.Designer.vb">
+      <DependentUpon>UserCreationvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser\UserCreationvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DevelopersSection\DevelopersAuth.Designer.vb">
       <DependentUpon>DevelopersAuth.vb</DependentUpon>
     </Compile>
     <Compile Include="DevelopersSection\DevelopersAuth.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword\Forgot_password.Designer.vb">
+      <DependentUpon>Forgot_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword\Forgot_password.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Initial Screens\Splash Screen\SplashScreen.Designer.vb">
@@ -209,8 +221,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\DbFunctions.vb" />
+    <Compile Include="Modules\EncryptionDecryption.vb" />
     <Compile Include="Modules\IpEntry.vb" />
     <Compile Include="Modules\loginValidation.vb" />
+    <Compile Include="Modules\SMS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -232,8 +246,14 @@
     <EmbeddedResource Include="AdminSection\AdminAuth.resx">
       <DependentUpon>AdminAuth.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser\UserCreationvb.resx">
+      <DependentUpon>UserCreationvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DevelopersSection\DevelopersAuth.resx">
       <DependentUpon>DevelopersAuth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword\Forgot_password.resx">
+      <DependentUpon>Forgot_password.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Initial Screens\Splash Screen\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
@@ -301,6 +321,13 @@
     <None Include="Resources\wp3476675.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Finanza.jpg" />
+    <Content Include="TextFile1.txt" />
+    <None Include="Resources\icons8_square_240px_3.png" />
+    <None Include="Resources\icons8_rounded_rectangle_stroked_64px.png" />
+    <None Include="Resources\icons8_sort_down_100px.png" />
+    <None Include="Resources\icons8_person_128px_1.png" />
+    <None Include="Resources\icons8_person_128px.png" />
     <None Include="Resources\icons8_person_64px.png" />
     <None Include="Resources\icons8_User_Group_2_24px.png" />
     <None Include="Resources\icons8_increase_32px.png" />
@@ -333,6 +360,11 @@
     <None Include="Resources\background.JPG" />
     <None Include="Resources\BG.JPG" />
     <None Include="Resources\BG2.jpg" />
+    <None Include="Resources\6.gif" />
+    <None Include="Resources\6 %281%29.gif" />
+    <None Include="Resources\backgroundClient.jpg" />
+    <None Include="Resources\backgroundClient1.jpg" />
+    <None Include="Resources\6 %283%29.gif" />
     <Content Include="Resources\icons8-person-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
