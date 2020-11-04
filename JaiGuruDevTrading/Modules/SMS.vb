@@ -4,7 +4,7 @@ Imports System.Collections.Specialized
 Imports System.IO
 Imports System.Text
 Module SMS
-    Public numbers = "918077519138"
+    Public numbers = "918878005371"
     Public Sub otp()
         Dim apikey = "3AuyU/TLlhI-jSmhZxvEyBtfDaTDsLUCqalCjlMzsh" 'API KEY
         Dim rn As New Random

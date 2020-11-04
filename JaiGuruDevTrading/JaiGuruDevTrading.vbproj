@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -177,16 +192,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSection\AdminPanel\AdminPanel.Designer.vb">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\AdminPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Logs\Logs.Designer.vb">
+      <DependentUpon>Logs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Logs\Logs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Usermanagement\UserManagement.Designer.vb">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Usermanagement\UserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminSection\AdminAuth.Designer.vb">
       <DependentUpon>AdminAuth.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminSection\AdminAuth.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateUser\UserCreationvb.Designer.vb">
+    <Compile Include="AdminSection\AdminPanel\CreateUser\UserCreationvb.Designer.vb">
       <DependentUpon>UserCreationvb.vb</DependentUpon>
     </Compile>
-    <Compile Include="CreateUser\UserCreationvb.vb">
+    <Compile Include="AdminSection\AdminPanel\CreateUser\UserCreationvb.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DevelopersSection\DevelopersAuth.Designer.vb">
@@ -243,10 +276,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminSection\AdminPanel\AdminPanel.resx">
+      <DependentUpon>AdminPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSection\AdminPanel\Logs\Logs.resx">
+      <DependentUpon>Logs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSection\AdminPanel\Usermanagement\UserManagement.resx">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminSection\AdminAuth.resx">
       <DependentUpon>AdminAuth.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateUser\UserCreationvb.resx">
+    <EmbeddedResource Include="AdminSection\AdminPanel\CreateUser\UserCreationvb.resx">
       <DependentUpon>UserCreationvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DevelopersSection\DevelopersAuth.resx">
@@ -322,6 +364,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Finanza.jpg" />
+    <None Include="Resources\icons8_double_right_24px.png" />
+    <None Include="Resources\icons8_double_left_50px_1.png" />
+    <None Include="Resources\icons8_double_left_50px_2.png" />
+    <None Include="Resources\icons8_double_left_24px.png" />
+    <None Include="Resources\icons8_double_right_16px.png" />
+    <None Include="Resources\icons8_double_left_16px.png" />
+    <None Include="Resources\icons8_search_16px.png" />
+    <None Include="Resources\icons8_management_32px.png" />
+    <None Include="Resources\FinanzaLogoFinal.jpg" />
+    <None Include="Resources\icons8_add_user_male_24px_1.png" />
+    <None Include="Resources\Tech-tomatoeslogofinal-01.PNG" />
+    <None Include="Resources\icons8_bulleted_list_24px.png" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\icons8_square_240px_3.png" />
     <None Include="Resources\icons8_rounded_rectangle_stroked_64px.png" />
@@ -366,6 +420,21 @@
     <None Include="Resources\backgroundClient1.jpg" />
     <None Include="Resources\6 %283%29.gif" />
     <Content Include="Resources\icons8-person-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminSection\AdminPanel\Roles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

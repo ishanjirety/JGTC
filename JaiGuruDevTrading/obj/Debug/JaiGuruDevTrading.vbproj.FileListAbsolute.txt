@@ -95,9 +95,12 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bi
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.DevelopersAuth.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.AdminAuth.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.SplashScreen.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Forgot_password.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.UserCreationvb.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.AdminPanel.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.UserManagement.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Logs.resources

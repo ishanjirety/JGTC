@@ -23,20 +23,86 @@ Partial Class User_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User_Login))
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Cancel = New System.Windows.Forms.Button()
-        Me.OK = New System.Windows.Forms.Button()
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameLabel = New System.Windows.Forms.Label()
-        Me.Panel2.SuspendLayout()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'UsernameLabel
+        '
+        Me.UsernameLabel.BackColor = System.Drawing.Color.Transparent
+        Me.UsernameLabel.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.UsernameLabel, "UsernameLabel")
+        Me.UsernameLabel.Name = "UsernameLabel"
+        '
+        'PasswordLabel
+        '
+        Me.PasswordLabel.BackColor = System.Drawing.Color.Transparent
+        Me.PasswordLabel.ForeColor = System.Drawing.Color.White
+        resources.ApplyResources(Me.PasswordLabel, "PasswordLabel")
+        Me.PasswordLabel.Name = "PasswordLabel"
+        '
+        'UsernameTextBox
+        '
+        resources.ApplyResources(Me.UsernameTextBox, "UsernameTextBox")
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        '
+        'PasswordTextBox
+        '
+        resources.ApplyResources(Me.PasswordTextBox, "PasswordTextBox")
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        '
+        'OK
+        '
+        Me.OK.FlatAppearance.BorderSize = 0
+        Me.OK.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.OK, "OK")
+        Me.OK.Name = "OK"
+        '
+        'Cancel
+        '
+        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.Cancel, "Cancel")
+        Me.Cancel.Name = "Cancel"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_person_64
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'LinkLabel1
+        '
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.TabStop = True
         '
         'Panel2
         '
@@ -53,69 +119,9 @@ Partial Class User_Login
         resources.ApplyResources(Me.Panel2, "Panel2")
         Me.Panel2.Name = "Panel2"
         '
-        'LinkLabel1
+        'Timer1
         '
-        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.TabStop = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_multiply_24__1_
-        resources.ApplyResources(Me.Button1, "Button1")
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.Name = "Button1"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_person_64
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
-        '
-        'Cancel
-        '
-        Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.Cancel, "Cancel")
-        Me.Cancel.Name = "Cancel"
-        '
-        'OK
-        '
-        Me.OK.FlatAppearance.BorderSize = 0
-        Me.OK.ForeColor = System.Drawing.Color.Black
-        resources.ApplyResources(Me.OK, "OK")
-        Me.OK.Name = "OK"
-        '
-        'PasswordTextBox
-        '
-        resources.ApplyResources(Me.PasswordTextBox, "PasswordTextBox")
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        '
-        'UsernameTextBox
-        '
-        resources.ApplyResources(Me.UsernameTextBox, "UsernameTextBox")
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        '
-        'PasswordLabel
-        '
-        Me.PasswordLabel.BackColor = System.Drawing.Color.Transparent
-        Me.PasswordLabel.ForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.PasswordLabel, "PasswordLabel")
-        Me.PasswordLabel.Name = "PasswordLabel"
-        '
-        'UsernameLabel
-        '
-        Me.UsernameLabel.BackColor = System.Drawing.Color.Transparent
-        Me.UsernameLabel.ForeColor = System.Drawing.Color.White
-        resources.ApplyResources(Me.UsernameLabel, "UsernameLabel")
-        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.Timer1.Interval = 20000
         '
         'User_Login
         '
@@ -125,25 +131,28 @@ Partial Class User_Login
         Me.Controls.Add(Me.Panel2)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "User_Login"
         Me.ShowInTaskbar = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Cancel As Button
-    Friend WithEvents OK As Button
-    Friend WithEvents PasswordTextBox As TextBox
-    Friend WithEvents UsernameTextBox As TextBox
-    Friend WithEvents PasswordLabel As Label
+
     Friend WithEvents UsernameLabel As Label
+    Friend WithEvents PasswordLabel As Label
+    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents PasswordTextBox As TextBox
+    Friend WithEvents OK As Button
+    Friend WithEvents Cancel As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Timer1 As Timer
 End Class

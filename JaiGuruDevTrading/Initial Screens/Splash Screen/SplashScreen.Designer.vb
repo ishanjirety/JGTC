@@ -78,7 +78,7 @@ Partial Class SplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.Finanza
+        Me.BackgroundImage = Global.JaiGuruDevTrading.My.Resources.Resources.FinanzaLogoFinal
         Me.ClientSize = New System.Drawing.Size(700, 400)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)

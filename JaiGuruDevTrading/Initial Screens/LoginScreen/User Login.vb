@@ -1,4 +1,3 @@
-Imports MySql.Data.MySqlClient
 Public Class User_Login
     Private Sub OK_Click(sender As Object, e As EventArgs) Handles OK.Click
         Validate1()
