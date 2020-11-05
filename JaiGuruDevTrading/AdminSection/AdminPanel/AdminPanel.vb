@@ -42,4 +42,15 @@
             .Show()
         End With
     End Sub
+
+    Private Sub Btn_roles_Click(sender As Object, e As EventArgs) Handles Btn_roles.Click
+        PanelContent.Controls.Clear()
+        With GrantRoles
+            .TopLevel = False
+            PanelContent.Controls.Add(GrantRoles)
+            .BringToFront()
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
+    End Sub
 End Class
