@@ -539,5 +539,14 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to server=localhost;PORT=3306;username=root;database=jgtc.
+        '''</summary>
+        Friend ReadOnly Property test() As String
+            Get
+                Return ResourceManager.GetString("test", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

@@ -1,9 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Net
 Module DbFunctions
-    Public conn As MySqlConnection = New MySqlConnection("server=localhost;username=root;database=jgtc")
+    Dim fileReader As String = My.Computer.FileSystem.ReadAllText(My.Computer.FileSystem.CurrentDirectory + "\test.txt")
+    ' Reads Connection From txt file For Future Modifications
+    Public conn As MySqlConnection = New MySqlConnection(fileReader)
     Dim entry_status As String = "NULL"
-    Public Sub MakeLogEntry()
+
+    Public Sub MakeLogEntry()           'Makes Entry In Database Of Login And Logout
         '<----------------------------->
         Dim name As String = Dns.GetHostName
         Dim hname As IPHostEntry = Dns.GetHostByName(name)
@@ -29,24 +32,24 @@ Module DbFunctions
         End If
 
     End Sub
-    Private Sub val()
+    Private Sub val()   'Validates If last login date is todays date and sets entry status true if yes
         Dim name As String = Dns.GetHostName
         Dim hname As IPHostEntry = Dns.GetHostByName(name)
         Dim ip As IPAddress() = hname.AddressList
 
-        Dim SQL = "SELECT * FROM `logs` WHERE `last_login_date` = @pcname AND `log_ip`=@ip"
+        Dim SQL = "SELECT * FROM `logs` WHERE `last_login_date` = @date AND `log_ip`=@ip"
         Dim cmd As MySqlCommand = New MySqlCommand(SQL, conn)
         Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
         conn.Close()
         conn.Open()
-        cmd.Parameters.Add(New MySqlParameter("@pcname", todaysdate))
+        cmd.Parameters.Add(New MySqlParameter("@date", todaysdate))
         cmd.Parameters.Add(New MySqlParameter("@ip", ip(0).ToString))
         Dim rdr As MySqlDataReader = cmd.ExecuteReader
         If rdr.HasRows Then
             entry_status = "True"
         End If
     End Sub
-    Public Sub logout()
+    Public Sub logout()     'Makes Logout Entry In DB
         val()
         Dim name As String = Dns.GetHostName
         Dim hname As IPHostEntry = Dns.GetHostByName(name)
@@ -67,7 +70,7 @@ Module DbFunctions
             End Try
         End If
     End Sub
-    Function registeration(ByVal cipher As String, ByVal username As String, ByVal role As String)
+    Function registeration(ByVal cipher As String, ByVal username As String, ByVal role As String)  'User Registeration
         Dim chk As Boolean = check(username)
         If chk = True Then
             Try
@@ -76,7 +79,6 @@ Module DbFunctions
                 Dim cmd As MySqlCommand = New MySqlCommand("Insert Into userlogin(username,password,role) values('" + username + "','" + cipher + "','" + role + "')", conn)
                 Dim rdr As MySqlDataReader = cmd.ExecuteReader
                 If rdr.HasRows Then
-                    MsgBox("Exist")
                     conn.Close()
                 End If
             Catch ex As MySqlException
@@ -86,7 +88,7 @@ Module DbFunctions
             End Try
         End If
     End Function
-    Function check(ByVal username) As Boolean
+    Function check(ByVal username) As Boolean   'Checks If Username Exists and returns Boolean
         Try
             conn.Close()
             conn.Open()
@@ -105,10 +107,11 @@ Module DbFunctions
             conn.Close()
         End Try
     End Function
-    Public Function LoadTable() As DataSet
+    Public Function LoadTable() As DataSet  'Loads Userlogin Table
         '
         Try
             Dim Str As String = "SELECT * FROM `userlogin` "
+            conn.Close()
             conn.Open()
             Dim Search As New MySqlDataAdapter(Str, conn)
             Dim ds As DataSet = New DataSet
@@ -120,10 +123,11 @@ Module DbFunctions
             conn.Close()
         End Try
     End Function
-    Function loadpasswd(ByVal username As String)
+    Function loadpasswd(ByVal username As String)   'Loads Password For Decoding
         Dim cipher As String
         Try
             Dim Str As String = "SELECT password FROM `userlogin` where username = '" + username + "'"
+            conn.Close()
             conn.Open()
             Dim cmd As MySqlCommand = New MySqlCommand(Str, conn)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
@@ -138,7 +142,8 @@ Module DbFunctions
         End Try
 
     End Function
-    Public Function Loadlogs() As DataSet
+    Public Function Loadlogs() As DataSet   'Loads Login Logout info
+        conn.Close()
         Try
             Dim Str As String = "SELECT * FROM `logs` "
             conn.Open()

@@ -28,11 +28,14 @@ Partial Class GrantRoles
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Voucher = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.voucherCmb = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ActiveCmb = New System.Windows.Forms.ComboBox()
         Me.AlyCmb = New System.Windows.Forms.ComboBox()
@@ -74,11 +77,14 @@ Partial Class GrantRoles
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.Voucher)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.voucherCmb)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.ActiveCmb)
         Me.Panel2.Controls.Add(Me.AlyCmb)
@@ -100,21 +106,33 @@ Partial Class GrantRoles
         '
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(218, 232)
+        Me.Button3.Location = New System.Drawing.Point(273, 246)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(50, 23)
-        Me.Button3.TabIndex = 31
+        Me.Button3.Size = New System.Drawing.Size(54, 23)
+        Me.Button3.TabIndex = 11
         Me.Button3.Text = "Cancel"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button4.ForeColor = System.Drawing.Color.Maroon
+        Me.Button4.Location = New System.Drawing.Point(217, 246)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(50, 23)
+        Me.Button4.TabIndex = 10
+        Me.Button4.Text = "Delete"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(162, 232)
+        Me.Button2.Location = New System.Drawing.Point(161, 246)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 23)
-        Me.Button2.TabIndex = 31
+        Me.Button2.TabIndex = 9
         Me.Button2.Text = "Edit"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -122,17 +140,26 @@ Partial Class GrantRoles
         '
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(36, 232)
+        Me.Button1.Location = New System.Drawing.Point(35, 246)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 23)
-        Me.Button1.TabIndex = 31
+        Me.Button1.TabIndex = 8
         Me.Button1.Text = "Apply Changes"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Voucher
+        '
+        Me.Voucher.AutoSize = True
+        Me.Voucher.Location = New System.Drawing.Point(41, 183)
+        Me.Voucher.Name = "Voucher"
+        Me.Voucher.Size = New System.Drawing.Size(52, 13)
+        Me.Voucher.TabIndex = 17
+        Me.Voucher.Text = "Vouchers"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(41, 186)
+        Me.Label6.Location = New System.Drawing.Point(41, 208)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 13)
         Me.Label6.TabIndex = 17
@@ -156,6 +183,15 @@ Partial Class GrantRoles
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Payroll"
         '
+        'voucherCmb
+        '
+        Me.voucherCmb.FormattingEnabled = True
+        Me.voucherCmb.Items.AddRange(New Object() {"False", "True"})
+        Me.voucherCmb.Location = New System.Drawing.Point(137, 180)
+        Me.voucherCmb.Name = "voucherCmb"
+        Me.voucherCmb.Size = New System.Drawing.Size(130, 21)
+        Me.voucherCmb.TabIndex = 6
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -169,10 +205,10 @@ Partial Class GrantRoles
         '
         Me.ActiveCmb.FormattingEnabled = True
         Me.ActiveCmb.Items.AddRange(New Object() {"False", "True"})
-        Me.ActiveCmb.Location = New System.Drawing.Point(137, 183)
+        Me.ActiveCmb.Location = New System.Drawing.Point(137, 205)
         Me.ActiveCmb.Name = "ActiveCmb"
         Me.ActiveCmb.Size = New System.Drawing.Size(130, 21)
-        Me.ActiveCmb.TabIndex = 25
+        Me.ActiveCmb.TabIndex = 7
         '
         'AlyCmb
         '
@@ -181,7 +217,7 @@ Partial Class GrantRoles
         Me.AlyCmb.Location = New System.Drawing.Point(137, 156)
         Me.AlyCmb.Name = "AlyCmb"
         Me.AlyCmb.Size = New System.Drawing.Size(130, 21)
-        Me.AlyCmb.TabIndex = 26
+        Me.AlyCmb.TabIndex = 5
         '
         'PRCmb
         '
@@ -190,7 +226,7 @@ Partial Class GrantRoles
         Me.PRCmb.Location = New System.Drawing.Point(137, 129)
         Me.PRCmb.Name = "PRCmb"
         Me.PRCmb.Size = New System.Drawing.Size(130, 21)
-        Me.PRCmb.TabIndex = 27
+        Me.PRCmb.TabIndex = 4
         '
         'InvCmb
         '
@@ -199,7 +235,7 @@ Partial Class GrantRoles
         Me.InvCmb.Location = New System.Drawing.Point(137, 102)
         Me.InvCmb.Name = "InvCmb"
         Me.InvCmb.Size = New System.Drawing.Size(130, 21)
-        Me.InvCmb.TabIndex = 28
+        Me.InvCmb.TabIndex = 3
         '
         'AccCmb
         '
@@ -208,7 +244,7 @@ Partial Class GrantRoles
         Me.AccCmb.Location = New System.Drawing.Point(137, 75)
         Me.AccCmb.Name = "AccCmb"
         Me.AccCmb.Size = New System.Drawing.Size(130, 21)
-        Me.AccCmb.TabIndex = 29
+        Me.AccCmb.TabIndex = 2
         '
         'billCmb
         '
@@ -217,7 +253,7 @@ Partial Class GrantRoles
         Me.billCmb.Location = New System.Drawing.Point(137, 48)
         Me.billCmb.Name = "billCmb"
         Me.billCmb.Size = New System.Drawing.Size(130, 21)
-        Me.billCmb.TabIndex = 30
+        Me.billCmb.TabIndex = 1
         '
         'Label2
         '
@@ -233,7 +269,7 @@ Partial Class GrantRoles
         Me.NameCmb.Location = New System.Drawing.Point(137, 22)
         Me.NameCmb.Name = "NameCmb"
         Me.NameCmb.Size = New System.Drawing.Size(130, 20)
-        Me.NameCmb.TabIndex = 24
+        Me.NameCmb.TabIndex = 0
         '
         'Label1
         '
@@ -322,4 +358,7 @@ Partial Class GrantRoles
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Voucher As Label
+    Friend WithEvents voucherCmb As ComboBox
 End Class

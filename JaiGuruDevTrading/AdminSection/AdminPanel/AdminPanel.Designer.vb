@@ -57,8 +57,8 @@ Partial Class AdminPanel
         Me.Btn_Dump.Location = New System.Drawing.Point(0, 155)
         Me.Btn_Dump.Name = "Btn_Dump"
         Me.Btn_Dump.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_Dump.TabIndex = 0
-        Me.Btn_Dump.Text = "Dump DB"
+        Me.Btn_Dump.TabIndex = 5
+        Me.Btn_Dump.Text = "Turn Of Messaging Services"
         Me.Btn_Dump.UseVisualStyleBackColor = True
         '
         'Btn_Truncate
@@ -70,7 +70,7 @@ Partial Class AdminPanel
         Me.Btn_Truncate.Location = New System.Drawing.Point(0, 124)
         Me.Btn_Truncate.Name = "Btn_Truncate"
         Me.Btn_Truncate.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_Truncate.TabIndex = 0
+        Me.Btn_Truncate.TabIndex = 4
         Me.Btn_Truncate.Text = "Truncate Table"
         Me.Btn_Truncate.UseVisualStyleBackColor = True
         '
@@ -82,7 +82,7 @@ Partial Class AdminPanel
         Me.Btn_Create.Location = New System.Drawing.Point(0, 93)
         Me.Btn_Create.Name = "Btn_Create"
         Me.Btn_Create.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_Create.TabIndex = 4
+        Me.Btn_Create.TabIndex = 3
         Me.Btn_Create.Text = "Create User"
         Me.Btn_Create.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class AdminPanel
         Me.Btn_logs.Location = New System.Drawing.Point(0, 62)
         Me.Btn_logs.Name = "Btn_logs"
         Me.Btn_logs.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_logs.TabIndex = 0
+        Me.Btn_logs.TabIndex = 2
         Me.Btn_logs.Text = "Logs"
         Me.Btn_logs.UseVisualStyleBackColor = True
         '

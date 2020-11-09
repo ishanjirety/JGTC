@@ -32,6 +32,25 @@ Public Class UserCreationvb
         'MsgBox(cipher)
         Return cipher
     End Function
+
+    Private Sub UserCreationvb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DbFunctions.conn.Close()
+        DbFunctions.conn.Open()
+        Dim ds As New DataSet
+        Dim da As New MySqlDataAdapter
+        Dim Str As String = "select role_name From roles "
+        Dim cmd As MySqlCommand = New MySqlCommand(Str, DbFunctions.conn)
+        da.SelectCommand = cmd
+        da.Fill(ds, "roles")
+        Dim a As Integer = ds.Tables("roles").Rows.Count - 1
+        For i As Integer = 0 To a
+            RoleCmb.Items.Add(ds.Tables("roles").Rows(i)(0).ToString())
+        Next
+    End Sub
+
+    Private Sub RoleCmb_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RoleCmb.KeyPress
+        e.Handled = False
+    End Sub
     'Function decoding() As String
     '    Dim cipher As String = cipher2
     '    Dim key As String = "IJ2000"

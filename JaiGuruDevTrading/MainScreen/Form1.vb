@@ -8,7 +8,9 @@ Public Class Form1
     Dim counter As Integer = 0
     '<-----------Pannel Style------------>
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label2.Text = loginValidation.role
         pc_name.Text = IPView()
+        PannelBill.Hide()
         pannelWidth = Panel2.Width
         Panel1.Width = 0
         Panel2.Width = 0
@@ -73,8 +75,8 @@ Public Class Form1
     End Sub
     Private Sub Button1_Click_3(sender As Object, e As EventArgs) Handles Button1.Click
         Timer1.Start()
-        PannelBill.Show()
-        PannelBill.Dock = DockStyle.Fill
+        'PannelBill.Show()
+        'PannelBill.Dock = DockStyle.Fill
         Accounts.Hide()
     End Sub
     Private Sub Btn_Bill_Click_1(sender As Object, e As EventArgs) Handles Btn_Bill.Click

@@ -187,7 +187,7 @@
     <value>220, 20</value>
   </data>
   <data name="UsernameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;UsernameTextBox.Name" xml:space="preserve">
     <value>UsernameTextBox</value>
@@ -211,7 +211,7 @@
     <value>220, 20</value>
   </data>
   <data name="PasswordTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;PasswordTextBox.Name" xml:space="preserve">
     <value>PasswordTextBox</value>
@@ -235,7 +235,7 @@
     <value>94, 23</value>
   </data>
   <data name="OK.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>2</value>
   </data>
   <data name="OK.Text" xml:space="preserve">
     <value>&amp;OK</value>
@@ -262,7 +262,7 @@
     <value>94, 23</value>
   </data>
   <data name="Cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>3</value>
   </data>
   <data name="Cancel.Text" xml:space="preserve">
     <value>&amp;Cancel</value>
@@ -322,7 +322,7 @@
     <value>34, 23</value>
   </data>
   <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;Button1.Name" xml:space="preserve">
     <value>Button1</value>
@@ -349,7 +349,7 @@
     <value>86, 13</value>
   </data>
   <data name="LinkLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>4</value>
   </data>
   <data name="LinkLabel1.Text" xml:space="preserve">
     <value>Forgot Password</value>
@@ -376,7 +376,7 @@
     <value>448, 273</value>
   </data>
   <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
     <value>Panel2</value>

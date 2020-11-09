@@ -80,7 +80,7 @@ Partial Class Forgot_password
         Me.Btn_val.Location = New System.Drawing.Point(201, 98)
         Me.Btn_val.Name = "Btn_val"
         Me.Btn_val.Size = New System.Drawing.Size(103, 23)
-        Me.Btn_val.TabIndex = 30
+        Me.Btn_val.TabIndex = 3
         Me.Btn_val.Text = "Validate"
         Me.Btn_val.UseVisualStyleBackColor = True
         '
@@ -92,7 +92,7 @@ Partial Class Forgot_password
         Me.LinkLabel1.Location = New System.Drawing.Point(157, 77)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(72, 13)
-        Me.LinkLabel1.TabIndex = 31
+        Me.LinkLabel1.TabIndex = 1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Resend OTP "
         '
@@ -128,7 +128,7 @@ Partial Class Forgot_password
         Me.Btn_otp.Location = New System.Drawing.Point(79, 98)
         Me.Btn_otp.Name = "Btn_otp"
         Me.Btn_otp.Size = New System.Drawing.Size(103, 23)
-        Me.Btn_otp.TabIndex = 30
+        Me.Btn_otp.TabIndex = 2
         Me.Btn_otp.Text = "Send OTP"
         Me.Btn_otp.UseVisualStyleBackColor = True
         '
@@ -137,7 +137,7 @@ Partial Class Forgot_password
         Me.TextBox1.Location = New System.Drawing.Point(140, 54)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(152, 20)
-        Me.TextBox1.TabIndex = 33
+        Me.TextBox1.TabIndex = 0
         '
         'Forgot_password
         '

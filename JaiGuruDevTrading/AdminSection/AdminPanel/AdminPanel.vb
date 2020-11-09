@@ -1,12 +1,4 @@
 ﻿Public Class AdminPanel
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Btn_Usr_Click(sender As Object, e As EventArgs) Handles Btn_Usr.Click
         PanelContent.Controls.Clear()
         With UserManagement
@@ -52,5 +44,9 @@
             .Dock = DockStyle.Fill
             .Show()
         End With
+    End Sub
+
+    Private Sub PanelContent_Paint(sender As Object, e As PaintEventArgs) Handles PanelContent.Paint
+
     End Sub
 End Class

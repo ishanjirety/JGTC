@@ -98,7 +98,7 @@ Partial Class DevelopersAuth
         Me.Btn_validate.Location = New System.Drawing.Point(155, 68)
         Me.Btn_validate.Name = "Btn_validate"
         Me.Btn_validate.Size = New System.Drawing.Size(92, 23)
-        Me.Btn_validate.TabIndex = 15
+        Me.Btn_validate.TabIndex = 1
         Me.Btn_validate.Text = "Validate"
         Me.Btn_validate.UseVisualStyleBackColor = True
         '
@@ -110,7 +110,7 @@ Partial Class DevelopersAuth
         Me.MaskedTextBox1.Name = "MaskedTextBox1"
         Me.MaskedTextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.MaskedTextBox1.Size = New System.Drawing.Size(126, 24)
-        Me.MaskedTextBox1.TabIndex = 13
+        Me.MaskedTextBox1.TabIndex = 0
         '
         'Label1
         '

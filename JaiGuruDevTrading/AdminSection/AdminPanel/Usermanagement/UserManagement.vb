@@ -1,13 +1,28 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class UserManagement
-    Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;database=jgtc")
+    'Dim con As MySqlConnection = New MySqlConnection("server=localhost;username=root;database=jgtc")
+    Dim fileReader As String = My.Computer.FileSystem.ReadAllText(My.Computer.FileSystem.CurrentDirectory + "\test.txt")
+    ' Reads Connection From txt file For Future Modifications
+    Public con As MySqlConnection = New MySqlConnection(fileReader)
     Dim selectedrow As DataGridViewRow
     Dim username As String
     Dim password As String
     Dim role As String
     Dim click As Boolean = False
     Private Sub UserManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim ds As DataSet = LoadTable()
+        DbFunctions.conn.Close()
+        DbFunctions.conn.Open()
+        Dim ds As New DataSet
+        Dim da As New MySqlDataAdapter
+        Dim Str As String = "select role_name From roles "
+        Dim cmd As MySqlCommand = New MySqlCommand(Str, DbFunctions.conn)
+        da.SelectCommand = cmd
+        da.Fill(ds, "roles")
+        Dim a As Integer = ds.Tables("roles").Rows.Count - 1
+        For i As Integer = 0 To a
+            RoleCmb.Items.Add(ds.Tables("roles").Rows(i)(0).ToString())
+        Next
+        LoadTable()
         Btn_Edit.Enabled = True
         UsrTxt.Enabled = False
         Passwd.Enabled = False
@@ -139,5 +154,9 @@ Public Class UserManagement
 
         adapter.Fill(table)
         DataGridView1.DataSource = table
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

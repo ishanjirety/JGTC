@@ -41,7 +41,7 @@ Partial Class UserCreationvb
         Me.UsernameTxt.Location = New System.Drawing.Point(219, 74)
         Me.UsernameTxt.Name = "UsernameTxt"
         Me.UsernameTxt.Size = New System.Drawing.Size(206, 20)
-        Me.UsernameTxt.TabIndex = 10
+        Me.UsernameTxt.TabIndex = 0
         '
         'Label1
         '
@@ -59,7 +59,7 @@ Partial Class UserCreationvb
         Me.PasswordTxt.Name = "PasswordTxt"
         Me.PasswordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordTxt.Size = New System.Drawing.Size(206, 20)
-        Me.PasswordTxt.TabIndex = 10
+        Me.PasswordTxt.TabIndex = 1
         '
         'Label2
         '
@@ -77,7 +77,7 @@ Partial Class UserCreationvb
         Me.RePasswordTxt.Name = "RePasswordTxt"
         Me.RePasswordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.RePasswordTxt.Size = New System.Drawing.Size(206, 20)
-        Me.RePasswordTxt.TabIndex = 10
+        Me.RePasswordTxt.TabIndex = 2
         '
         'Label3
         '
@@ -91,11 +91,13 @@ Partial Class UserCreationvb
         '
         'RoleCmb
         '
+        Me.RoleCmb.BackColor = System.Drawing.SystemColors.Window
+        Me.RoleCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.RoleCmb.FormattingEnabled = True
         Me.RoleCmb.Location = New System.Drawing.Point(219, 185)
         Me.RoleCmb.Name = "RoleCmb"
         Me.RoleCmb.Size = New System.Drawing.Size(206, 21)
-        Me.RoleCmb.TabIndex = 12
+        Me.RoleCmb.TabIndex = 3
         '
         'Role
         '
@@ -115,7 +117,7 @@ Partial Class UserCreationvb
         Me.Button1.Location = New System.Drawing.Point(189, 245)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(97, 23)
-        Me.Button1.TabIndex = 13
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Create"
         Me.Button1.UseVisualStyleBackColor = False
         '

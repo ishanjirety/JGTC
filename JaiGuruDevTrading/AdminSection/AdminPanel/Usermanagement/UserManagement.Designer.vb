@@ -73,7 +73,7 @@ Partial Class UserManagement
         Me.TextBox1.Location = New System.Drawing.Point(107, 58)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(193, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TabIndex = 0
         '
         'Label1
         '
@@ -123,7 +123,7 @@ Partial Class UserManagement
         Me.Btn_Apply.Location = New System.Drawing.Point(6, 142)
         Me.Btn_Apply.Name = "Btn_Apply"
         Me.Btn_Apply.Size = New System.Drawing.Size(128, 23)
-        Me.Btn_Apply.TabIndex = 5
+        Me.Btn_Apply.TabIndex = 3
         Me.Btn_Apply.Text = "Apply Changes"
         Me.Btn_Apply.UseVisualStyleBackColor = True
         '
@@ -154,7 +154,7 @@ Partial Class UserManagement
         Me.Btn_cancel.Location = New System.Drawing.Point(140, 142)
         Me.Btn_cancel.Name = "Btn_cancel"
         Me.Btn_cancel.Size = New System.Drawing.Size(85, 23)
-        Me.Btn_cancel.TabIndex = 12
+        Me.Btn_cancel.TabIndex = 4
         Me.Btn_cancel.Text = "Cancel"
         Me.Btn_cancel.UseVisualStyleBackColor = True
         '
@@ -196,7 +196,7 @@ Partial Class UserManagement
         Me.RoleCmb.Location = New System.Drawing.Point(95, 82)
         Me.RoleCmb.Name = "RoleCmb"
         Me.RoleCmb.Size = New System.Drawing.Size(200, 21)
-        Me.RoleCmb.TabIndex = 11
+        Me.RoleCmb.TabIndex = 2
         '
         'Label4
         '
@@ -221,14 +221,14 @@ Partial Class UserManagement
         Me.Passwd.Location = New System.Drawing.Point(95, 56)
         Me.Passwd.Name = "Passwd"
         Me.Passwd.Size = New System.Drawing.Size(200, 20)
-        Me.Passwd.TabIndex = 6
+        Me.Passwd.TabIndex = 1
         '
         'UsrTxt
         '
         Me.UsrTxt.Location = New System.Drawing.Point(95, 29)
         Me.UsrTxt.Name = "UsrTxt"
         Me.UsrTxt.Size = New System.Drawing.Size(200, 20)
-        Me.UsrTxt.TabIndex = 7
+        Me.UsrTxt.TabIndex = 0
         '
         'UserManagement
         '
