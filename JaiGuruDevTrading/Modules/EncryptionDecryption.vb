@@ -2,9 +2,7 @@
 Public NotInheritable Class EncryptionDecryption
     Private TripleDes As New TripleDESCryptoServiceProvider
     Private Function TruncateHas(ByVal key As String, ByVal length As Integer) As Byte()
-
         Dim sha1 As New SHA1CryptoServiceProvider
-
         Dim keybyte() As Byte = System.Text.Encoding.Unicode.GetBytes(key)
         Dim hash() As Byte = sha1.ComputeHash(keybyte)
         ReDim Preserve hash(length - 1)

@@ -106,7 +106,7 @@ Partial Class GrantRoles
         '
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(273, 246)
+        Me.Button3.Location = New System.Drawing.Point(272, 246)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(54, 23)
         Me.Button3.TabIndex = 11
@@ -118,9 +118,9 @@ Partial Class GrantRoles
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.ForeColor = System.Drawing.Color.Maroon
-        Me.Button4.Location = New System.Drawing.Point(217, 246)
+        Me.Button4.Location = New System.Drawing.Point(210, 246)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(50, 23)
+        Me.Button4.Size = New System.Drawing.Size(56, 23)
         Me.Button4.TabIndex = 10
         Me.Button4.Text = "Delete"
         Me.Button4.UseVisualStyleBackColor = True
@@ -129,7 +129,7 @@ Partial Class GrantRoles
         '
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(161, 246)
+        Me.Button2.Location = New System.Drawing.Point(154, 246)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 23)
         Me.Button2.TabIndex = 9
@@ -140,7 +140,7 @@ Partial Class GrantRoles
         '
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Location = New System.Drawing.Point(35, 246)
+        Me.Button1.Location = New System.Drawing.Point(28, 246)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(120, 23)
         Me.Button1.TabIndex = 8

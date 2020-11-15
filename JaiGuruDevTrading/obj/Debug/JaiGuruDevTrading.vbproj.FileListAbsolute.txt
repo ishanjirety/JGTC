@@ -20,6 +20,7 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bi
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\MySql.Data.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.exe.config
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.add.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.AdminPanel.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Logs.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.GrantRoles.resources
@@ -32,6 +33,7 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\ob
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Form1.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Resources.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.ViewInventory.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.en-IN.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.User_Login.hi.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbproj.GenerateResource.cache
@@ -42,4 +44,3 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\ob
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.exe
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.pdb
-C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache

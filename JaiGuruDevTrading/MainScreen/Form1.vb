@@ -75,17 +75,15 @@ Public Class Form1
     End Sub
     Private Sub Button1_Click_3(sender As Object, e As EventArgs) Handles Button1.Click
         Timer1.Start()
-        'PannelBill.Show()
-        'PannelBill.Dock = DockStyle.Fill
-        Accounts.Hide()
+        FunHide()
     End Sub
     Private Sub Btn_Bill_Click_1(sender As Object, e As EventArgs) Handles Btn_Bill.Click
+        FunHide()
         PannelBill.Show()
-        Accounts.Hide()
         PannelBill.Dock = DockStyle.Fill
     End Sub
     Private Sub Btn_Acc_Click_1(sender As Object, e As EventArgs) Handles Btn_Acc.Click
-        PannelBill.Hide()
+        FunHide()
         Accounts.Show()
         Accounts.Dock = DockStyle.Fill
     End Sub
@@ -119,116 +117,258 @@ Public Class Form1
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+    Private Sub Btn_vouch_Click(sender As Object, e As EventArgs) Handles Btn_vouch.Click
+        FunHide()
+        Vouchers.Show()
+        Vouchers.Dock = DockStyle.Fill
+    End Sub
+
+    Private Sub FunHide()
+        Inventory.Hide()
+        Accounts.Hide()
+        PannelBill.Hide()
+        Vouchers.Hide()
+    End Sub
+
+    Private Sub Btn_Inven_Click(sender As Object, e As EventArgs) Handles Btn_Inven.Click
+        FunHide()
+        Inventory.Show()
+        Inventory.Dock = DockStyle.Fill
+    End Sub
     'Colour Changes'
-    Private Sub Btn_Bill_MouseEnter(sender As Object, e As EventArgs)
+    Private Sub Btn_Bill_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Bill.MouseEnter
         Btn_Bill.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Bill_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Bill_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Bill.MouseLeave
         Btn_Bill.ForeColor = Color.Black
     End Sub
-    Private Sub Btn_Acc_MouseEnter(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Acc_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Acc.MouseEnter
         Btn_Acc.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Acc_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Acc_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Acc.MouseLeave
         Btn_Acc.ForeColor = Color.Black
     End Sub
-    Private Sub Btn_Inven_MouseLeave(sender As Object, e As EventArgs)
-        Btn_Inven.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_Inven_MouseEnter(sender As Object, e As EventArgs)
-        Btn_Inven.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_Payroll_MouseEnter(sender As Object, e As EventArgs)
-        Btn_Payroll.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_Payroll_MouseLeave(sender As Object, e As EventArgs)
-        Btn_Payroll.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_info_MouseLeave(sender As Object, e As EventArgs)
-        Btn_info.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_info_MouseEnter(sender As Object, e As EventArgs)
-        Btn_info.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_Logout_MouseEnter(sender As Object, e As EventArgs)
-        Btn_Logout.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_Logout_MouseLeave(sender As Object, e As EventArgs)
-        Btn_Logout.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_challan_MouseLeave(sender As Object, e As EventArgs)
-        Btn_challan.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_challan_MouseEnter(sender As Object, e As EventArgs)
-        Btn_challan.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_ledger_MouseEnter(sender As Object, e As EventArgs)
-        Btn_ledger.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_ledger_MouseLeave(sender As Object, e As EventArgs)
-        Btn_ledger.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_BS_MouseEnter(sender As Object, e As EventArgs)
-        Btn_BS.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_BS_MouseLeave(sender As Object, e As EventArgs)
-        Btn_BS.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs)
-        Btn_deb.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_deb_MouseLeave(sender As Object, e As EventArgs)
-        Btn_deb.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_Gst_MouseEnter(sender As Object, e As EventArgs)
-        Btn_Gst.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_Gst_MouseLeave(sender As Object, e As EventArgs)
-        Btn_Gst.ForeColor = Color.Black
-    End Sub
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs)
-    End Sub
-    Private Sub RetailBtn_MouseEnter(sender As Object, e As EventArgs)
-        RetailBtn.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs)
-        RetailBtn.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_journal_MouseEnter(sender As Object, e As EventArgs)
-        Btn_journal.ForeColor = Color.DodgerBlue
-    End Sub
-    Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs)
-        Btn_journal.ForeColor = Color.Black
-    End Sub
-    Private Sub Btn_vouch_MouseEnter(sender As Object, e As EventArgs)
+
+    Private Sub Btn_vouch_MouseEnter(sender As Object, e As EventArgs) Handles Btn_vouch.MouseEnter
         Btn_vouch.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_vouch_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_vouch_MouseLeave(sender As Object, e As EventArgs) Handles Btn_vouch.MouseLeave
         Btn_vouch.ForeColor = Color.Black
     End Sub
-    Private Sub Btn_Analytics_MouseEnter(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Inven_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Inven.MouseEnter
+        Btn_Inven.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_Inven_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Inven.MouseLeave
+        Btn_Inven.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Payroll_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseEnter
+        Btn_Payroll.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_Payroll_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Payroll.MouseLeave
+        Btn_Payroll.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Analytics_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Analytics.MouseEnter
         Btn_Analytics.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Analytics_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Analytics_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Analytics.MouseLeave
         Btn_Analytics.ForeColor = Color.Black
     End Sub
 
-    Private Sub Btn_User_MouseEnter(sender As Object, e As EventArgs)
+    Private Sub Btn_User_MouseEnter(sender As Object, e As EventArgs) Handles Btn_User.MouseEnter
         Btn_User.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_User_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_User_MouseLeave(sender As Object, e As EventArgs) Handles Btn_User.MouseLeave
         Btn_User.ForeColor = Color.Black
     End Sub
-    Private Sub Btn_Admin_MouseLeave(sender As Object, e As EventArgs)
-        Btn_Admin.ForeColor = Color.Black
+
+    Private Sub Btn_info_MouseEnter(sender As Object, e As EventArgs) Handles Btn_info.MouseEnter
+        Btn_info.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Admin_MouseEnter(sender As Object, e As EventArgs)
+
+    Private Sub Btn_info_MouseLeave(sender As Object, e As EventArgs) Handles Btn_info.MouseLeave
+        Btn_info.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Logout_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Logout.MouseEnter
+        Btn_Logout.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_Logout_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Logout.MouseLeave
+        Btn_Logout.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Admin_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Admin.MouseEnter
         Btn_Admin.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Dev_MouseEnter(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Admin_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Admin.MouseLeave
+        Btn_Admin.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Dev_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Dev.MouseEnter
         Btn_Dev.ForeColor = Color.DodgerBlue
     End Sub
-    Private Sub Btn_Dev_MouseLeave(sender As Object, e As EventArgs)
+
+    Private Sub Btn_Dev_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Dev.MouseLeave
         Btn_Dev.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_challan_MouseEnter(sender As Object, e As EventArgs) Handles Btn_challan.MouseEnter
+        Btn_challan.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_challan_MouseLeave(sender As Object, e As EventArgs) Handles Btn_challan.MouseLeave
+        Btn_challan.ForeColor = Color.Black
+    End Sub
+
+    Private Sub RetailBtn_MouseEnter(sender As Object, e As EventArgs) Handles RetailBtn.MouseEnter
+        RetailBtn.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs) Handles RetailBtn.MouseLeave
+        RetailBtn.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_journal_MouseEnter(sender As Object, e As EventArgs) Handles Btn_journal.MouseEnter
+        Btn_journal.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs) Handles Btn_journal.MouseLeave
+        Btn_journal.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_ledger_MouseEnter(sender As Object, e As EventArgs) Handles Btn_ledger.MouseEnter
+        Btn_ledger.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_ledger_MouseLeave(sender As Object, e As EventArgs) Handles Btn_ledger.MouseLeave
+        Btn_ledger.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs) Handles Btn_deb.MouseEnter
+        Btn_deb.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_deb_MouseLeave(sender As Object, e As EventArgs) Handles Btn_deb.MouseLeave
+        Btn_deb.ForeColor = Color.Black
+    End Sub
+
+    Private Sub btn_dep_MouseEnter(sender As Object, e As EventArgs) Handles Btn_dep.MouseEnter
+        Btn_dep.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_dep_MouseLeave(sender As Object, e As EventArgs) Handles Btn_dep.MouseLeave
+        Btn_dep.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_CB_MouseEnter(sender As Object, e As EventArgs) Handles Btn_CB.MouseEnter
+        Btn_CB.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_CB_MouseLeave(sender As Object, e As EventArgs) Handles Btn_CB.MouseLeave
+        Btn_CB.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_BS_MouseEnter(sender As Object, e As EventArgs) Handles Btn_BS.MouseEnter
+        Btn_BS.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_BS_MouseLeave(sender As Object, e As EventArgs) Handles Btn_BS.MouseLeave
+        Btn_BS.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Gst_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Gst.MouseEnter
+        Btn_Gst.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_Gst_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Gst.MouseLeave
+        Btn_Gst.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_PurVoucher_MouseEnter(sender As Object, e As EventArgs) Handles Btn_PurVoucher.MouseEnter
+        Btn_PurVoucher.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_PurVoucher_MouseLeave(sender As Object, e As EventArgs) Handles Btn_PurVoucher.MouseLeave
+        Btn_PurVoucher.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_SVoucher_MouseEnter(sender As Object, e As EventArgs) Handles Btn_SVoucher.MouseEnter
+        Btn_SVoucher.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_SVoucher_MouseLeave(sender As Object, e As EventArgs) Handles Btn_SVoucher.MouseLeave
+        Btn_SVoucher.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_Jvoucher_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Jvoucher.MouseEnter
+        Btn_Jvoucher.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_Jvoucher_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Jvoucher.MouseLeave
+        Btn_Jvoucher.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_CVoucher_MouseEnter(sender As Object, e As EventArgs) Handles Btn_CVoucher.MouseEnter
+        Btn_CVoucher.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_CVoucher_MouseLeave(sender As Object, e As EventArgs) Handles Btn_CVoucher.MouseLeave
+        Btn_CVoucher.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_viewInv_MouseEnter(sender As Object, e As EventArgs) Handles Btn_viewInv.MouseEnter
+        Btn_viewInv.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_viewInv_MouseLeave(sender As Object, e As EventArgs) Handles Btn_viewInv.MouseLeave
+        Btn_viewInv.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_EditInv_MouseEnter(sender As Object, e As EventArgs) Handles Btn_EditInv.MouseEnter
+        Btn_EditInv.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_EditInv_MouseLeave(sender As Object, e As EventArgs) Handles Btn_EditInv.MouseLeave
+        Btn_EditInv.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_invManage_MouseEnter(sender As Object, e As EventArgs) Handles Btn_invManage.MouseEnter
+        Btn_invManage.ForeColor = Color.DodgerBlue
+    End Sub
+
+    Private Sub Btn_invManage_MouseLeave(sender As Object, e As EventArgs) Handles Btn_invManage.MouseLeave
+        Btn_invManage.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Btn_viewInv_Click(sender As Object, e As EventArgs) Handles Btn_viewInv.Click
+        With ViewInventory
+            .TopLevel = False
+            main.Controls.Add(ViewInventory)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub Btn_EditInv_Click(sender As Object, e As EventArgs) Handles Btn_EditInv.Click
+        With add
+            .TopLevel = False
+            main.Controls.Add(add)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 End Class

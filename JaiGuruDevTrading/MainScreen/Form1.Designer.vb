@@ -27,12 +27,21 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Vouchers = New System.Windows.Forms.Panel()
+        Me.Btn_CVoucher = New System.Windows.Forms.Button()
+        Me.Btn_Jvoucher = New System.Windows.Forms.Button()
+        Me.Btn_SVoucher = New System.Windows.Forms.Button()
+        Me.Btn_PurVoucher = New System.Windows.Forms.Button()
+        Me.Inventory = New System.Windows.Forms.Panel()
+        Me.Btn_invManage = New System.Windows.Forms.Button()
+        Me.Btn_EditInv = New System.Windows.Forms.Button()
+        Me.Btn_viewInv = New System.Windows.Forms.Button()
+        Me.PR = New System.Windows.Forms.Panel()
         Me.Accounts = New System.Windows.Forms.Panel()
         Me.Btn_Gst = New System.Windows.Forms.Button()
         Me.Btn_BS = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Btn_CB = New System.Windows.Forms.Button()
+        Me.Btn_dep = New System.Windows.Forms.Button()
         Me.Btn_deb = New System.Windows.Forms.Button()
         Me.Btn_ledger = New System.Windows.Forms.Button()
         Me.Btn_journal = New System.Windows.Forms.Button()
@@ -65,17 +74,9 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.main = New System.Windows.Forms.Panel()
-        Me.Vouchers = New System.Windows.Forms.Panel()
-        Me.Inventory = New System.Windows.Forms.Panel()
-        Me.PR = New System.Windows.Forms.Panel()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
+        Me.Vouchers.SuspendLayout()
+        Me.Inventory.SuspendLayout()
         Me.Accounts.SuspendLayout()
         Me.PannelBill.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -83,8 +84,6 @@ Partial Class Form1
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Vouchers.SuspendLayout()
-        Me.Inventory.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -94,31 +93,173 @@ Partial Class Form1
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.PR)
-        Me.Panel2.Controls.Add(Me.Inventory)
         Me.Panel2.Controls.Add(Me.Vouchers)
+        Me.Panel2.Controls.Add(Me.Inventory)
+        Me.Panel2.Controls.Add(Me.PR)
         Me.Panel2.Controls.Add(Me.Accounts)
         Me.Panel2.Controls.Add(Me.PannelBill)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(168, 52)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(216, 736)
+        Me.Panel2.Size = New System.Drawing.Size(216, 698)
         Me.Panel2.TabIndex = 1
+        '
+        'Vouchers
+        '
+        Me.Vouchers.BackColor = System.Drawing.Color.Transparent
+        Me.Vouchers.Controls.Add(Me.Btn_CVoucher)
+        Me.Vouchers.Controls.Add(Me.Btn_Jvoucher)
+        Me.Vouchers.Controls.Add(Me.Btn_SVoucher)
+        Me.Vouchers.Controls.Add(Me.Btn_PurVoucher)
+        Me.Vouchers.Location = New System.Drawing.Point(0, 247)
+        Me.Vouchers.Name = "Vouchers"
+        Me.Vouchers.Size = New System.Drawing.Size(216, 56)
+        Me.Vouchers.TabIndex = 17
+        '
+        'Btn_CVoucher
+        '
+        Me.Btn_CVoucher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_CVoucher.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_CVoucher.FlatAppearance.BorderSize = 0
+        Me.Btn_CVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_CVoucher.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CVoucher.Image = CType(resources.GetObject("Btn_CVoucher.Image"), System.Drawing.Image)
+        Me.Btn_CVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_CVoucher.Location = New System.Drawing.Point(0, 108)
+        Me.Btn_CVoucher.Name = "Btn_CVoucher"
+        Me.Btn_CVoucher.Size = New System.Drawing.Size(216, 36)
+        Me.Btn_CVoucher.TabIndex = 4
+        Me.Btn_CVoucher.Text = "Contra Voucher"
+        Me.Btn_CVoucher.UseVisualStyleBackColor = True
+        '
+        'Btn_Jvoucher
+        '
+        Me.Btn_Jvoucher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_Jvoucher.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_Jvoucher.FlatAppearance.BorderSize = 0
+        Me.Btn_Jvoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Jvoucher.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Jvoucher.Image = CType(resources.GetObject("Btn_Jvoucher.Image"), System.Drawing.Image)
+        Me.Btn_Jvoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_Jvoucher.Location = New System.Drawing.Point(0, 72)
+        Me.Btn_Jvoucher.Name = "Btn_Jvoucher"
+        Me.Btn_Jvoucher.Size = New System.Drawing.Size(216, 36)
+        Me.Btn_Jvoucher.TabIndex = 3
+        Me.Btn_Jvoucher.Text = "Journal Voucher"
+        Me.Btn_Jvoucher.UseVisualStyleBackColor = True
+        '
+        'Btn_SVoucher
+        '
+        Me.Btn_SVoucher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_SVoucher.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_SVoucher.FlatAppearance.BorderSize = 0
+        Me.Btn_SVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_SVoucher.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_SVoucher.Image = CType(resources.GetObject("Btn_SVoucher.Image"), System.Drawing.Image)
+        Me.Btn_SVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_SVoucher.Location = New System.Drawing.Point(0, 36)
+        Me.Btn_SVoucher.Name = "Btn_SVoucher"
+        Me.Btn_SVoucher.Size = New System.Drawing.Size(216, 36)
+        Me.Btn_SVoucher.TabIndex = 2
+        Me.Btn_SVoucher.Text = "Sales Voucher"
+        Me.Btn_SVoucher.UseVisualStyleBackColor = True
+        '
+        'Btn_PurVoucher
+        '
+        Me.Btn_PurVoucher.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_PurVoucher.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_PurVoucher.FlatAppearance.BorderSize = 0
+        Me.Btn_PurVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_PurVoucher.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_PurVoucher.Image = CType(resources.GetObject("Btn_PurVoucher.Image"), System.Drawing.Image)
+        Me.Btn_PurVoucher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_PurVoucher.Location = New System.Drawing.Point(0, 0)
+        Me.Btn_PurVoucher.Name = "Btn_PurVoucher"
+        Me.Btn_PurVoucher.Size = New System.Drawing.Size(216, 36)
+        Me.Btn_PurVoucher.TabIndex = 1
+        Me.Btn_PurVoucher.Text = "Purchase Voucher"
+        Me.Btn_PurVoucher.UseVisualStyleBackColor = True
+        '
+        'Inventory
+        '
+        Me.Inventory.BackColor = System.Drawing.Color.Transparent
+        Me.Inventory.Controls.Add(Me.Btn_invManage)
+        Me.Inventory.Controls.Add(Me.Btn_EditInv)
+        Me.Inventory.Controls.Add(Me.Btn_viewInv)
+        Me.Inventory.Location = New System.Drawing.Point(1, 336)
+        Me.Inventory.Name = "Inventory"
+        Me.Inventory.Size = New System.Drawing.Size(214, 222)
+        Me.Inventory.TabIndex = 17
+        '
+        'Btn_invManage
+        '
+        Me.Btn_invManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_invManage.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_invManage.FlatAppearance.BorderSize = 0
+        Me.Btn_invManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_invManage.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_invManage.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
+        Me.Btn_invManage.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Btn_invManage.Location = New System.Drawing.Point(0, 71)
+        Me.Btn_invManage.Name = "Btn_invManage"
+        Me.Btn_invManage.Size = New System.Drawing.Size(214, 31)
+        Me.Btn_invManage.TabIndex = 6
+        Me.Btn_invManage.Text = "Inventory Management"
+        Me.Btn_invManage.UseVisualStyleBackColor = True
+        '
+        'Btn_EditInv
+        '
+        Me.Btn_EditInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_EditInv.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_EditInv.FlatAppearance.BorderSize = 0
+        Me.Btn_EditInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_EditInv.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_EditInv.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
+        Me.Btn_EditInv.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Btn_EditInv.Location = New System.Drawing.Point(0, 40)
+        Me.Btn_EditInv.Name = "Btn_EditInv"
+        Me.Btn_EditInv.Size = New System.Drawing.Size(214, 31)
+        Me.Btn_EditInv.TabIndex = 5
+        Me.Btn_EditInv.Text = "Edit Inventory"
+        Me.Btn_EditInv.UseVisualStyleBackColor = True
+        '
+        'Btn_viewInv
+        '
+        Me.Btn_viewInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Btn_viewInv.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_viewInv.FlatAppearance.BorderSize = 0
+        Me.Btn_viewInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_viewInv.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_viewInv.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
+        Me.Btn_viewInv.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.Btn_viewInv.Location = New System.Drawing.Point(0, 0)
+        Me.Btn_viewInv.Name = "Btn_viewInv"
+        Me.Btn_viewInv.Size = New System.Drawing.Size(214, 40)
+        Me.Btn_viewInv.TabIndex = 4
+        Me.Btn_viewInv.Text = "View Inventory"
+        Me.Btn_viewInv.UseVisualStyleBackColor = True
+        '
+        'PR
+        '
+        Me.PR.Location = New System.Drawing.Point(0, 582)
+        Me.PR.Name = "PR"
+        Me.PR.Size = New System.Drawing.Size(216, 90)
+        Me.PR.TabIndex = 17
         '
         'Accounts
         '
+        Me.Accounts.BackColor = System.Drawing.Color.Transparent
         Me.Accounts.Controls.Add(Me.Btn_Gst)
         Me.Accounts.Controls.Add(Me.Btn_BS)
-        Me.Accounts.Controls.Add(Me.Button6)
-        Me.Accounts.Controls.Add(Me.Button4)
-        Me.Accounts.Controls.Add(Me.Button5)
+        Me.Accounts.Controls.Add(Me.Btn_CB)
+        Me.Accounts.Controls.Add(Me.Btn_dep)
         Me.Accounts.Controls.Add(Me.Btn_deb)
         Me.Accounts.Controls.Add(Me.Btn_ledger)
         Me.Accounts.Controls.Add(Me.Btn_journal)
-        Me.Accounts.Location = New System.Drawing.Point(1, 184)
+        Me.Accounts.Location = New System.Drawing.Point(1, 186)
         Me.Accounts.Name = "Accounts"
-        Me.Accounts.Size = New System.Drawing.Size(214, 44)
+        Me.Accounts.Size = New System.Drawing.Size(214, 57)
         Me.Accounts.TabIndex = 8
         '
         'Btn_Gst
@@ -130,7 +271,7 @@ Partial Class Form1
         Me.Btn_Gst.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Gst.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_Gst.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Gst.Location = New System.Drawing.Point(0, 252)
+        Me.Btn_Gst.Location = New System.Drawing.Point(0, 216)
         Me.Btn_Gst.Name = "Btn_Gst"
         Me.Btn_Gst.Size = New System.Drawing.Size(214, 36)
         Me.Btn_Gst.TabIndex = 16
@@ -146,60 +287,44 @@ Partial Class Form1
         Me.Btn_BS.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_BS.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_BS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_BS.Location = New System.Drawing.Point(0, 216)
+        Me.Btn_BS.Location = New System.Drawing.Point(0, 180)
         Me.Btn_BS.Name = "Btn_BS"
         Me.Btn_BS.Size = New System.Drawing.Size(214, 36)
         Me.Btn_BS.TabIndex = 15
         Me.Btn_BS.Text = "Balance Sheet"
         Me.Btn_BS.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Btn_CB
         '
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(0, 180)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(214, 36)
-        Me.Button6.TabIndex = 13
-        Me.Button6.Text = "Cash Book"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Btn_CB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_CB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_CB.FlatAppearance.BorderSize = 0
+        Me.Btn_CB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_CB.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CB.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
+        Me.Btn_CB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_CB.Location = New System.Drawing.Point(0, 144)
+        Me.Btn_CB.Name = "Btn_CB"
+        Me.Btn_CB.Size = New System.Drawing.Size(214, 36)
+        Me.Btn_CB.TabIndex = 13
+        Me.Btn_CB.Text = "Cash Book"
+        Me.Btn_CB.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Btn_dep
         '
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 144)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(214, 36)
-        Me.Button4.TabIndex = 9
-        Me.Button4.Text = "Depriciation"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 108)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(214, 36)
-        Me.Button5.TabIndex = 7
-        Me.Button5.Text = "Creditors"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Btn_dep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Btn_dep.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Btn_dep.FlatAppearance.BorderSize = 0
+        Me.Btn_dep.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_dep.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_dep.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
+        Me.Btn_dep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Btn_dep.Location = New System.Drawing.Point(0, 108)
+        Me.Btn_dep.Name = "Btn_dep"
+        Me.Btn_dep.Size = New System.Drawing.Size(214, 36)
+        Me.Btn_dep.TabIndex = 9
+        Me.Btn_dep.Text = "Depriciation"
+        Me.Btn_dep.UseVisualStyleBackColor = True
         '
         'Btn_deb
         '
@@ -251,11 +376,12 @@ Partial Class Form1
         '
         'PannelBill
         '
+        Me.PannelBill.BackColor = System.Drawing.Color.Transparent
         Me.PannelBill.Controls.Add(Me.Btn_challan)
         Me.PannelBill.Controls.Add(Me.RetailBtn)
         Me.PannelBill.Location = New System.Drawing.Point(0, 108)
         Me.PannelBill.Name = "PannelBill"
-        Me.PannelBill.Size = New System.Drawing.Size(215, 70)
+        Me.PannelBill.Size = New System.Drawing.Size(215, 72)
         Me.PannelBill.TabIndex = 11
         '
         'Btn_challan
@@ -373,7 +499,7 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(34, 52)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(134, 736)
+        Me.Panel1.Size = New System.Drawing.Size(134, 698)
         Me.Panel1.TabIndex = 0
         '
         'Btn_Logout
@@ -385,7 +511,7 @@ Partial Class Form1
         Me.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Logout.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Logout.Location = New System.Drawing.Point(1, 633)
+        Me.Btn_Logout.Location = New System.Drawing.Point(1, 595)
         Me.Btn_Logout.Name = "Btn_Logout"
         Me.Btn_Logout.Size = New System.Drawing.Size(131, 28)
         Me.Btn_Logout.TabIndex = 8
@@ -401,7 +527,7 @@ Partial Class Form1
         Me.Btn_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_info.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_info.Location = New System.Drawing.Point(0, 593)
+        Me.Btn_info.Location = New System.Drawing.Point(0, 555)
         Me.Btn_info.Name = "Btn_info"
         Me.Btn_info.Size = New System.Drawing.Size(134, 31)
         Me.Btn_info.TabIndex = 7
@@ -417,7 +543,7 @@ Partial Class Form1
         Me.Btn_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Admin.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Admin.Location = New System.Drawing.Point(-1, 665)
+        Me.Btn_Admin.Location = New System.Drawing.Point(-1, 627)
         Me.Btn_Admin.Name = "Btn_Admin"
         Me.Btn_Admin.Size = New System.Drawing.Size(134, 27)
         Me.Btn_Admin.TabIndex = 9
@@ -433,7 +559,7 @@ Partial Class Form1
         Me.Btn_Dev.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Dev.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dev.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Btn_Dev.Location = New System.Drawing.Point(0, 701)
+        Me.Btn_Dev.Location = New System.Drawing.Point(0, 663)
         Me.Btn_Dev.Name = "Btn_Dev"
         Me.Btn_Dev.Size = New System.Drawing.Size(134, 31)
         Me.Btn_Dev.TabIndex = 10
@@ -555,7 +681,7 @@ Partial Class Form1
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel7.Location = New System.Drawing.Point(0, 52)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(34, 736)
+        Me.Panel7.Size = New System.Drawing.Size(34, 698)
         Me.Panel7.TabIndex = 3
         '
         'Button1
@@ -640,155 +766,15 @@ Partial Class Form1
         Me.main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.main.Location = New System.Drawing.Point(384, 52)
         Me.main.Name = "main"
-        Me.main.Size = New System.Drawing.Size(356, 736)
+        Me.main.Size = New System.Drawing.Size(356, 698)
         Me.main.TabIndex = 17
-        '
-        'Vouchers
-        '
-        Me.Vouchers.Controls.Add(Me.Button10)
-        Me.Vouchers.Controls.Add(Me.Button9)
-        Me.Vouchers.Controls.Add(Me.Button8)
-        Me.Vouchers.Controls.Add(Me.Button7)
-        Me.Vouchers.Location = New System.Drawing.Point(-1, 266)
-        Me.Vouchers.Name = "Vouchers"
-        Me.Vouchers.Size = New System.Drawing.Size(216, 56)
-        Me.Vouchers.TabIndex = 17
-        '
-        'Inventory
-        '
-        Me.Inventory.Controls.Add(Me.Button13)
-        Me.Inventory.Controls.Add(Me.Button12)
-        Me.Inventory.Controls.Add(Me.Button11)
-        Me.Inventory.Location = New System.Drawing.Point(0, 371)
-        Me.Inventory.Name = "Inventory"
-        Me.Inventory.Size = New System.Drawing.Size(216, 136)
-        Me.Inventory.TabIndex = 17
-        '
-        'PR
-        '
-        Me.PR.Location = New System.Drawing.Point(0, 593)
-        Me.PR.Name = "PR"
-        Me.PR.Size = New System.Drawing.Size(216, 12)
-        Me.PR.TabIndex = 17
-        '
-        'Button7
-        '
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 0)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(216, 36)
-        Me.Button7.TabIndex = 1
-        Me.Button7.Text = "Purchase Voucher"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(0, 36)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(216, 36)
-        Me.Button8.TabIndex = 2
-        Me.Button8.Text = "Sales Voucher"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(0, 72)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(216, 36)
-        Me.Button9.TabIndex = 3
-        Me.Button9.Text = "Journal Voucher"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.Location = New System.Drawing.Point(0, 108)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(216, 36)
-        Me.Button10.TabIndex = 4
-        Me.Button10.Text = "Contra Voucher"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button11.FlatAppearance.BorderSize = 0
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button11.Location = New System.Drawing.Point(0, 0)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(216, 31)
-        Me.Button11.TabIndex = 4
-        Me.Button11.Text = "View Inventory"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button12
-        '
-        Me.Button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button12.FlatAppearance.BorderSize = 0
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button12.Location = New System.Drawing.Point(0, 31)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(216, 31)
-        Me.Button12.TabIndex = 5
-        Me.Button12.Text = "Edit Inventory"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button13.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button13.FlatAppearance.BorderSize = 0
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button13.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_trolley_24px
-        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.Button13.Location = New System.Drawing.Point(0, 62)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(216, 31)
-        Me.Button13.TabIndex = 6
-        Me.Button13.Text = "Inventory Management"
-        Me.Button13.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(740, 788)
+        Me.ClientSize = New System.Drawing.Size(740, 750)
         Me.Controls.Add(Me.main)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -803,6 +789,8 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel2.ResumeLayout(False)
+        Me.Vouchers.ResumeLayout(False)
+        Me.Inventory.ResumeLayout(False)
         Me.Accounts.ResumeLayout(False)
         Me.PannelBill.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
@@ -812,8 +800,6 @@ Partial Class Form1
         Me.Panel7.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Vouchers.ResumeLayout(False)
-        Me.Inventory.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -853,19 +839,18 @@ Partial Class Form1
     Friend WithEvents main As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Btn_dep As Button
     Friend WithEvents Btn_Gst As Button
     Friend WithEvents Btn_BS As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Btn_CB As Button
     Friend WithEvents Vouchers As Panel
     Friend WithEvents PR As Panel
     Friend WithEvents Inventory As Panel
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents Btn_CVoucher As Button
+    Friend WithEvents Btn_Jvoucher As Button
+    Friend WithEvents Btn_SVoucher As Button
+    Friend WithEvents Btn_PurVoucher As Button
+    Friend WithEvents Btn_invManage As Button
+    Friend WithEvents Btn_EditInv As Button
+    Friend WithEvents Btn_viewInv As Button
 End Class

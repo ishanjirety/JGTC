@@ -49,4 +49,7 @@
     Private Sub PanelContent_Paint(sender As Object, e As PaintEventArgs) Handles PanelContent.Paint
 
     End Sub
+
+    Private Sub Btn_Truncate_Click(sender As Object, e As EventArgs) Handles Btn_Truncate.Click
+    End Sub
 End Class

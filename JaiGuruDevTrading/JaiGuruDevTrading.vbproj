@@ -78,6 +78,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -98,6 +99,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItems.Designer.vb">
+      <DependentUpon>AddItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminSection\AdminPanel\AdminPanel.Designer.vb">
       <DependentUpon>AdminPanel.vb</DependentUpon>
     </Compile>
@@ -187,8 +194,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NavContents\Inventory\Inventory.vb" />
+    <Compile Include="NavContents\Inventory\ViewInventory.Designer.vb">
+      <DependentUpon>ViewInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Inventory\ViewInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddItems.resx">
+      <DependentUpon>AddItems.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminSection\AdminPanel\AdminPanel.resx">
       <DependentUpon>AdminPanel.vb</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +250,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Inventory\ViewInventory.resx">
+      <DependentUpon>ViewInventory.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +315,8 @@
     <None Include="Resources\icons8_bulleted_list_24px.png" />
     <None Include="Resources\icons8_management_30px.png" />
     <None Include="bin\Debug\test.txt" />
+    <None Include="Resources\icons8_trash_16px.png" />
+    <None Include="Resources\icons8_plus_math_16px.png" />
     <Content Include="Resources\test.txt" />
     <Content Include="Tech-tomatoeslogofinal-01.ico" />
     <Content Include="TextFile1.txt" />
@@ -354,6 +376,13 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="NavContents\Accounts\" />
+    <Folder Include="NavContents\Active Users\" />
+    <Folder Include="NavContents\Analytics\" />
+    <Folder Include="NavContents\Bills\" />
+    <Folder Include="NavContents\Payroll\" />
+    <Folder Include="NavContents\Vouchers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
