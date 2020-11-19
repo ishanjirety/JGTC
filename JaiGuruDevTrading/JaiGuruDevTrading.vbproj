@@ -99,10 +99,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddItems.Designer.vb">
+    <Compile Include="NavContents\Accounts\Ledger\CreateLedger.Designer.vb">
+      <DependentUpon>CreateLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Accounts\Ledger\CreateLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Accounts\Ledger\Ledger.vb" />
+    <Compile Include="NavContents\Accounts\View Ledgers\View Ledgers.Designer.vb">
+      <DependentUpon>View Ledgers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Accounts\View Ledgers\View Ledgers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Inventory\AddItems.Designer.vb">
       <DependentUpon>AddItems.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddItems.vb">
+    <Compile Include="NavContents\Inventory\AddItems.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminSection\AdminPanel\AdminPanel.Designer.vb">
@@ -201,9 +214,28 @@
     <Compile Include="NavContents\Inventory\ViewInventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NavContents\Vouchers\PurchaseVoucher.Designer.vb">
+      <DependentUpon>PurchaseVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Vouchers\PurchaseVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Vouchers\SalesVoucher.Designer.vb">
+      <DependentUpon>SalesVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Vouchers\SalesVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Vouchers\Vouchers.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddItems.resx">
+    <EmbeddedResource Include="NavContents\Accounts\Ledger\CreateLedger.resx">
+      <DependentUpon>CreateLedger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Accounts\View Ledgers\View Ledgers.resx">
+      <DependentUpon>View Ledgers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Inventory\AddItems.resx">
       <DependentUpon>AddItems.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSection\AdminPanel\AdminPanel.resx">
@@ -253,6 +285,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Inventory\ViewInventory.resx">
       <DependentUpon>ViewInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Vouchers\PurchaseVoucher.resx">
+      <DependentUpon>PurchaseVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Vouchers\SalesVoucher.resx">
+      <DependentUpon>SalesVoucher.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -377,12 +415,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NavContents\Accounts\" />
     <Folder Include="NavContents\Active Users\" />
     <Folder Include="NavContents\Analytics\" />
     <Folder Include="NavContents\Bills\" />
     <Folder Include="NavContents\Payroll\" />
-    <Folder Include="NavContents\Vouchers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

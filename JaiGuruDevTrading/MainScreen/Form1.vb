@@ -49,7 +49,6 @@ Public Class Form1
                     Panel1.Width -= 30
                 End If
             End If
-
         End If
     End Sub
     Private Sub Button1_Click_1(sender As Object, e As EventArgs)
@@ -88,12 +87,12 @@ Public Class Form1
         Accounts.Dock = DockStyle.Fill
     End Sub
     Private Sub RetailBtn_Click_1(sender As Object, e As EventArgs) Handles RetailBtn.Click
-        With UserCreationvb
-            .TopLevel = False
-            main.Controls.Add(UserCreationvb)
-            .BringToFront()
-            .Show()
-        End With
+        'With UserCreationvb
+        '    .TopLevel = False
+        '    main.Controls.Add(UserCreationvb)
+        '    .BringToFront()
+        '    .Show()
+        'End With
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         logout()
@@ -247,52 +246,43 @@ Public Class Form1
     Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs) Handles Btn_journal.MouseLeave
         Btn_journal.ForeColor = Color.Black
     End Sub
-
-    Private Sub Btn_ledger_MouseEnter(sender As Object, e As EventArgs) Handles Btn_ledger.MouseEnter
-        Btn_ledger.ForeColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub Btn_ledger_MouseLeave(sender As Object, e As EventArgs) Handles Btn_ledger.MouseLeave
-        Btn_ledger.ForeColor = Color.Black
-    End Sub
-
-    Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs) Handles Btn_deb.MouseEnter
+    Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs)
         Btn_deb.ForeColor = Color.DodgerBlue
     End Sub
 
-    Private Sub Btn_deb_MouseLeave(sender As Object, e As EventArgs) Handles Btn_deb.MouseLeave
+    Private Sub Btn_deb_MouseLeave(sender As Object, e As EventArgs)
         Btn_deb.ForeColor = Color.Black
     End Sub
 
-    Private Sub btn_dep_MouseEnter(sender As Object, e As EventArgs) Handles Btn_dep.MouseEnter
+    Private Sub btn_dep_MouseEnter(sender As Object, e As EventArgs)
         Btn_dep.ForeColor = Color.DodgerBlue
     End Sub
 
-    Private Sub Btn_dep_MouseLeave(sender As Object, e As EventArgs) Handles Btn_dep.MouseLeave
+    Private Sub Btn_dep_MouseLeave(sender As Object, e As EventArgs)
         Btn_dep.ForeColor = Color.Black
     End Sub
 
-    Private Sub Btn_CB_MouseEnter(sender As Object, e As EventArgs) Handles Btn_CB.MouseEnter
+    Private Sub Btn_CB_MouseEnter(sender As Object, e As EventArgs)
         Btn_CB.ForeColor = Color.DodgerBlue
     End Sub
 
-    Private Sub Btn_CB_MouseLeave(sender As Object, e As EventArgs) Handles Btn_CB.MouseLeave
+    Private Sub Btn_CB_MouseLeave(sender As Object, e As EventArgs)
         Btn_CB.ForeColor = Color.Black
     End Sub
 
-    Private Sub Btn_BS_MouseEnter(sender As Object, e As EventArgs) Handles Btn_BS.MouseEnter
+    Private Sub Btn_BS_MouseEnter(sender As Object, e As EventArgs)
         Btn_BS.ForeColor = Color.DodgerBlue
     End Sub
 
-    Private Sub Btn_BS_MouseLeave(sender As Object, e As EventArgs) Handles Btn_BS.MouseLeave
+    Private Sub Btn_BS_MouseLeave(sender As Object, e As EventArgs)
         Btn_BS.ForeColor = Color.Black
     End Sub
 
-    Private Sub Btn_Gst_MouseEnter(sender As Object, e As EventArgs) Handles Btn_Gst.MouseEnter
+    Private Sub Btn_Gst_MouseEnter(sender As Object, e As EventArgs)
         Btn_Gst.ForeColor = Color.DodgerBlue
     End Sub
 
-    Private Sub Btn_Gst_MouseLeave(sender As Object, e As EventArgs) Handles Btn_Gst.MouseLeave
+    Private Sub Btn_Gst_MouseLeave(sender As Object, e As EventArgs)
         Btn_Gst.ForeColor = Color.Black
     End Sub
 
@@ -335,15 +325,6 @@ Public Class Form1
     Private Sub Btn_viewInv_MouseLeave(sender As Object, e As EventArgs) Handles Btn_viewInv.MouseLeave
         Btn_viewInv.ForeColor = Color.Black
     End Sub
-
-    Private Sub Btn_EditInv_MouseEnter(sender As Object, e As EventArgs) Handles Btn_EditInv.MouseEnter
-        Btn_EditInv.ForeColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub Btn_EditInv_MouseLeave(sender As Object, e As EventArgs) Handles Btn_EditInv.MouseLeave
-        Btn_EditInv.ForeColor = Color.Black
-    End Sub
-
     Private Sub Btn_invManage_MouseEnter(sender As Object, e As EventArgs) Handles Btn_invManage.MouseEnter
         Btn_invManage.ForeColor = Color.DodgerBlue
     End Sub
@@ -353,6 +334,7 @@ Public Class Form1
     End Sub
 
     Private Sub Btn_viewInv_Click(sender As Object, e As EventArgs) Handles Btn_viewInv.Click
+        CloseForms()
         With ViewInventory
             .TopLevel = False
             main.Controls.Add(ViewInventory)
@@ -361,14 +343,46 @@ Public Class Form1
             .Show()
         End With
     End Sub
-
-    Private Sub Btn_EditInv_Click(sender As Object, e As EventArgs) Handles Btn_EditInv.Click
-        With add
+    Private Sub Btn_ledger_Click(sender As Object, e As EventArgs)
+        CloseForms()
+        With Create_Led
             .TopLevel = False
-            main.Controls.Add(add)
+            main.Controls.Add(Create_Led)
             .Dock = DockStyle.Fill
             .BringToFront()
             .Show()
         End With
+    End Sub
+    Private Sub CloseForms()
+        add.Close()
+        Create_Led.Close()
+        ViewInventory.Close()
+        UserCreationvb.Close()
+    End Sub
+
+    Private Sub Btn_PurVoucher_Click(sender As Object, e As EventArgs) Handles Btn_PurVoucher.Click
+        CloseForms()
+        With PurchaseVoucher
+            .TopLevel = False
+            main.Controls.Add(PurchaseVoucher)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub ViewLedger_Click(sender As Object, e As EventArgs) Handles ViewLedger.Click
+        CloseForms()
+        With View_Ledgers
+            .TopLevel = False
+            main.Controls.Add(View_Ledgers)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub main_Paint(sender As Object, e As PaintEventArgs) Handles main.Paint
+
     End Sub
 End Class

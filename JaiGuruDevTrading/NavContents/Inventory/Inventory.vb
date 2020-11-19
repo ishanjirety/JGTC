@@ -19,11 +19,11 @@ Module Inventory
             conn.Close()
         End Try
     End Sub
-    Public Sub insertData(ByVal name, ByVal qty, ByVal code, ByVal mfg, ByVal exp, ByVal discount, ByVal cp, ByVal sp, ByVal tax)
+    Public Sub insertData(ByVal name, ByVal qty, ByVal amt)
         Try
             conn.Close()
             conn.Open()
-            Dim str As String = "INSERT INTO `inventory` (`inv_itemName`, `inv_itemQty`, `inv_itemCode`, `inv_itemMfg`, `inv_itemExp`, `inv_itemCP`, `inv_itemSP`, `inv_itemTax`, `inv_itemDisc`,`EntryDate`) VALUES ('" + name + "', '" + qty + "', '" + code + "', '" + mfg + "', '" + exp + "', '" + cp + "', '" + sp + "', '" + tax + "', '" + discount + "','" + DateTime.Now + "')"
+            Dim str As String = "INSERT INTO `inventory` (`inv_itemName`, `inv_itemQty`, `amount`,`EntryDate`) VALUES ('" + name + "', '" + qty + "', '" + amt + "','" + DateTime.Now + "')"
             Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             MsgBox("Item Inserted Successfully", MsgBoxStyle.Information)

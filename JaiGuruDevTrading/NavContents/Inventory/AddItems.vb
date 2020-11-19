@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class add
     Private Sub clr()
-        Name.Text = Nothing
+        ItemName.Text = Nothing
         Quantity.Text = Nothing
         Code.Text = Nothing
         Discount.Text = Nothing
@@ -36,8 +36,8 @@ Public Class add
     End Sub
 
     Private Sub AdItems_Click_1(sender As Object, e As EventArgs) Handles AdItems.Click
-        If Name.Text <> Nothing And Quantity.Text <> Nothing And Code.Text <> Nothing And Discount.Text <> Nothing And CP.Text <> Nothing And SP.Text <> Nothing And TAX.Text <> Nothing Then
-            insertData(Name.Text, Quantity.Text, Code.Text, DateTimePicker1.Text, DateTimePicker2.Text, Discount.Text, CP.Text, SP.Text, TAX.Text)
+        If ItemName.Text <> Nothing And Quantity.Text <> Nothing And Code.Text <> Nothing And Discount.Text <> Nothing And CP.Text <> Nothing And SP.Text <> Nothing And TAX.Text <> Nothing Then
+            insertData(ItemName.Text, Quantity.Text, CP.Text)
             clr()
             Chart1.Series(0).Points.Clear()
             updategraph()

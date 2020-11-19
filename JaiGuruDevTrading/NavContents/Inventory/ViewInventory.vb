@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class ViewInventory
+
     Dim nameStore As String
     Private Sub ViewInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Edit.Enabled = False
@@ -7,14 +8,8 @@ Public Class ViewInventory
         DataGridView1.Columns(0).HeaderText = "ID"
         DataGridView1.Columns(1).HeaderText = "Name"
         DataGridView1.Columns(2).HeaderText = "Quantity"
-        DataGridView1.Columns(3).HeaderText = "Batch No./Code"
-        DataGridView1.Columns(4).HeaderText = "MFG"
-        DataGridView1.Columns(5).HeaderText = "EXP"
-        DataGridView1.Columns(6).HeaderText = "Costprice"
-        DataGridView1.Columns(7).HeaderText = "Selling Price"
-        DataGridView1.Columns(8).HeaderText = "Tax To Be Charged"
-        DataGridView1.Columns(9).HeaderText = "Discount To Be Given"
-        DataGridView1.Columns(10).HeaderText = "Date Of Entry"
+        DataGridView1.Columns(3).HeaderText = "Amount"
+        DataGridView1.Columns(4).HeaderText = "Date Of Entry"
         Me.DoubleBuffered = True
     End Sub
 
@@ -45,17 +40,75 @@ Public Class ViewInventory
     End Sub
 
     Private Sub DataGridView1_CellClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Dim index As Integer
-        Dim selectedrow As DataGridViewRow
-        index = e.RowIndex
-        selectedrow = DataGridView1.Rows(index)
-        TextBox1.Text = selectedrow.Cells(1).Value.ToString()
-        nameStore = TextBox1.Text
+        Try
+            Dim index As Integer
+            Dim selectedrow As DataGridViewRow
+            index = e.RowIndex
+            selectedrow = DataGridView1.Rows(index)
+            TextBox1.Text = selectedrow.Cells(1).Value.ToString()
+            nameStore = TextBox1.Text
+        Catch ex As Exception
+            MsgBox("Please Select A Single Row", MsgBoxStyle.Information)
+        End Try
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox2.Text = Nothing
         TextBox1.Text = Nothing
         Edit.Enabled = False
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Str As String
+        If ComboBox1.Text = "QUANTITY" Then
+            Str = "UPDATE `inventory` SET `inv_itemQty` = '" + TextBox3.Text + "' WHERE `inv_itemName` = '" + TextBox2.Text + "'"
+        ElseIf ComboBox1.Text = "AMOUNT" Then
+            Str = "UPDATE `inventory` SET `amount` = '" + TextBox3.Text + "' WHERE `inv_itemName` = '" + TextBox2.Text + "'"
+        ElseIf ComboBox1.Text = "ENTRY DATE" Then
+            Str = "UPDATE `inventory` SET `EntryDate` = '" + TextBox3.Text + "' WHERE `inv_itemName` = '" + TextBox2.Text + "'"
+        Else
+            MsgBox("Please Select Value To UPDATE", MsgBoxStyle.Exclamation)
+        End If
+
+        If ComboBox1.Text <> Nothing Then
+            Try
+                conn.Close()
+                conn.Open()
+                Dim cmd As MySqlCommand = New MySqlCommand(Str, conn)
+                Dim dr As MySqlDataReader = cmd.ExecuteReader()
+                MsgBox("Item Updated", MsgBoxStyle.Information)
+                clr()
+                FillData()
+                conn.Close()
+            Catch ex As MySqlException
+                MsgBox(ex.Message)
+                conn.Close()
+            End Try
+        End If
+        FillData()
+    End Sub
+    Private Sub clr()
+        TextBox1.Text = Nothing
+        TextBox2.Text = Nothing
+        TextBox3.Text = Nothing
+        ComboBox1.Text = Nothing
+    End Sub
+
+    Private Sub Btn_Delete_Click(sender As Object, e As EventArgs) Handles Btn_Delete.Click
+        Try
+            conn.Close()
+            conn.Open()
+            Dim str As String = "DELETE FROM `inventory` WHERE `inv_itemName` = '" + TextBox1.Text + "'"
+            Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
+            Dim dr As MySqlDataReader = cmd.ExecuteReader
+            MsgBox("Item Deleted", MsgBoxStyle.Information)
+            clr()
+            FillData()
+            Edit.Enabled = False
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
     End Sub
 End Class

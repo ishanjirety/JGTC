@@ -22,9 +22,9 @@ Partial Class add
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -35,21 +35,21 @@ Partial Class add
         Me.Button2 = New System.Windows.Forms.Button()
         Me.AdItems = New System.Windows.Forms.Button()
         Me.TAX = New System.Windows.Forms.TextBox()
-        Me.SP = New System.Windows.Forms.TextBox()
-        Me.Discount = New System.Windows.Forms.TextBox()
-        Me.CP = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Code = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Quantity = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Name = New System.Windows.Forms.TextBox()
+        Me.ItemName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.CP = New System.Windows.Forms.TextBox()
+        Me.Discount = New System.Windows.Forms.TextBox()
+        Me.SP = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -79,19 +79,19 @@ Partial Class add
         '
         'Chart1
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
         Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
         Me.Chart1.Location = New System.Drawing.Point(0, 0)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Item_And_Stock"
-        Me.Chart1.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Item_And_Stock"
+        Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(486, 413)
         Me.Chart1.TabIndex = 12
         Me.Chart1.Text = "Chart1"
@@ -125,7 +125,7 @@ Partial Class add
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Quantity)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Name)
+        Me.Panel3.Controls.Add(Me.ItemName)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 37)
@@ -174,27 +174,6 @@ Partial Class add
         Me.TAX.Size = New System.Drawing.Size(199, 20)
         Me.TAX.TabIndex = 27
         '
-        'SP
-        '
-        Me.SP.Location = New System.Drawing.Point(546, 149)
-        Me.SP.Name = "SP"
-        Me.SP.Size = New System.Drawing.Size(199, 20)
-        Me.SP.TabIndex = 26
-        '
-        'Discount
-        '
-        Me.Discount.Location = New System.Drawing.Point(546, 72)
-        Me.Discount.Name = "Discount"
-        Me.Discount.Size = New System.Drawing.Size(199, 20)
-        Me.Discount.TabIndex = 24
-        '
-        'CP
-        '
-        Me.CP.Location = New System.Drawing.Point(546, 110)
-        Me.CP.Name = "CP"
-        Me.CP.Size = New System.Drawing.Size(199, 20)
-        Me.CP.TabIndex = 25
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -204,36 +183,6 @@ Partial Class add
         Me.Label9.Size = New System.Drawing.Size(125, 16)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Tax To be Charged"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(406, 76)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(137, 16)
-        Me.Label10.TabIndex = 13
-        Me.Label10.Text = "Discount To be Given"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(406, 153)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 16)
-        Me.Label8.TabIndex = 20
-        Me.Label8.Text = "Selling Price"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(406, 114)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 16)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "Cost Price"
         '
         'Label6
         '
@@ -289,12 +238,12 @@ Partial Class add
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Item Quantity"
         '
-        'Name
+        'ItemName
         '
-        Me.Name.Location = New System.Drawing.Point(180, 72)
-        Me.Name.Name = "Name"
-        Me.Name.Size = New System.Drawing.Size(199, 20)
-        Me.Name.TabIndex = 12
+        Me.ItemName.Location = New System.Drawing.Point(180, 72)
+        Me.ItemName.Name = "ItemName"
+        Me.ItemName.Size = New System.Drawing.Size(199, 20)
+        Me.ItemName.TabIndex = 12
         '
         'Label2
         '
@@ -306,6 +255,57 @@ Partial Class add
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Item Name"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(406, 114)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(69, 16)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Cost Price"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(406, 153)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(83, 16)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "Selling Price"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(406, 76)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(137, 16)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "Discount To be Given"
+        '
+        'CP
+        '
+        Me.CP.Location = New System.Drawing.Point(546, 110)
+        Me.CP.Name = "CP"
+        Me.CP.Size = New System.Drawing.Size(199, 20)
+        Me.CP.TabIndex = 25
+        '
+        'Discount
+        '
+        Me.Discount.Location = New System.Drawing.Point(546, 72)
+        Me.Discount.Name = "Discount"
+        Me.Discount.Size = New System.Drawing.Size(199, 20)
+        Me.Discount.TabIndex = 24
+        '
+        'SP
+        '
+        Me.SP.Location = New System.Drawing.Point(546, 149)
+        Me.SP.Name = "SP"
+        Me.SP.Size = New System.Drawing.Size(199, 20)
+        Me.SP.TabIndex = 26
+        '
         'add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,6 +316,7 @@ Partial Class add
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Name = "add"
         Me.Text = "AddItems"
         Me.Panel1.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -336,19 +337,19 @@ Partial Class add
     Friend WithEvents Button2 As Button
     Friend WithEvents AdItems As Button
     Friend WithEvents TAX As TextBox
-    Friend WithEvents SP As TextBox
-    Friend WithEvents Discount As TextBox
-    Friend WithEvents CP As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Code As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Quantity As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Name As TextBox
+    Friend WithEvents ItemName As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents SP As TextBox
+    Friend WithEvents Discount As TextBox
+    Friend WithEvents CP As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
 End Class

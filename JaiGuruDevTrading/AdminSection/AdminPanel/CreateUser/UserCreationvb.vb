@@ -51,6 +51,10 @@ Public Class UserCreationvb
     Private Sub RoleCmb_KeyPress(sender As Object, e As KeyPressEventArgs) Handles RoleCmb.KeyPress
         e.Handled = False
     End Sub
+
+    Private Sub RoleCmb_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RoleCmb.SelectedIndexChanged
+
+    End Sub
     'Function decoding() As String
     '    Dim cipher As String = cipher2
     '    Dim key As String = "IJ2000"
