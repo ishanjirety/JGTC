@@ -8,13 +8,14 @@ Public Class PurchaseVoucher
     Private Sub PurchaseVoucher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtDate.Text = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
         filltxtbox()
-        FILLCMB()
+        FILLCMB("PurchaseVoucher")
         txtVouchNo.Text = voucherno + 1
     End Sub
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
         If txtAmt.Text <> Nothing And txtItemName.Text <> Nothing And txtQuantity.Text <> Nothing Then
             ListBox3.Items.Add(txtItemName.Text)
             ListBox2.Items.Add(txtQuantity.Text)
+            ListBox4.Items.Add(txtAmt.Text)
             Dim QA As Integer = Conversion.Val(txtQuantity.Text) * Conversion.Val(txtAmt.Text)
             ListBox1.Items.Add(QA)
 
@@ -34,7 +35,7 @@ Public Class PurchaseVoucher
             bool = checkLedger(TextBox1.Text)
             If bool = False Then
                 GetEntryStatus(TextBox1.Text)
-                MakeVoucherEntry(type, txtDate.Text, TextBox1.Text, TotalAmount.Text)
+                MakeVoucherEntry(type, txtDate.Text, TextBox1.Text, TotalAmount.Text, "TO")
                 If status = "YES" Then
                     Dim bool1 As Boolean = check(txtItemName.Text)
                     If bool1 = False Then
@@ -43,6 +44,7 @@ Public Class PurchaseVoucher
                         MakeInventoryEntryINSERT()
                     End If
                 End If
+                MakeRecordEntry()
                 txtVouchNo.Text = Conversion.Val(txtVouchNo.Text) + 1
 
                 clr()
@@ -60,6 +62,7 @@ Public Class PurchaseVoucher
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         ListBox3.Items.Clear()
+        ListBox4.Items.Clear()
 
     End Sub
     Private Sub GetEntryStatus(ByVal Name)
@@ -175,12 +178,70 @@ Public Class PurchaseVoucher
         Create_Led.LedNAME.Text = TextBox1.Text
         Create_Led.FormBorderStyle = FormBorderStyle.FixedSingle
     End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
     Private Sub btn_clr_Click(sender As Object, e As EventArgs) Handles btn_clr.Click
         clr()
+    End Sub
+    Private Sub MakeRecordEntry()
+        Try
+            conn.Close()
+            For i As Integer = 0 To ListBox1.Items.Count - 1
+                conn.Open()
+                ListBox1.SetSelected(i, True)
+                ListBox2.SetSelected(i, True)
+                ListBox3.SetSelected(i, True)
+                ListBox4.SetSelected(i, True)
+                Dim itemName As String = ListBox3.SelectedItem
+                Dim QTY As String = ListBox2.SelectedItem
+                Dim Rate As String = ListBox4.SelectedItem
+                Dim amt As String = ListBox1.SelectedItem
+
+                Dim str As String = "INSERT INTO `purchase` (`VoucherNo`, `ItemName`, `ItemQty`, `Rate`, `Amount`) VALUES ( '" + txtVouchNo.Text + "', '" + itemName + "', '" + QTY + "', '" + Rate + "', '" + amt + "')"
+                Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
+                Dim dr As MySqlDataReader = cmd.ExecuteReader()
+                conn.Close()
+            Next
+        Catch ex As mysqlException
+            MsgBox("AN ERROR OCCURED : " + ex.Message)
+        End Try
+    End Sub
+
+    Private Sub txtQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQuantity.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub txtItemName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtItemName.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 65 Or Asc(e.KeyChar) > 122 Then
+                If Asc(e.KeyChar) = 32 Then
+                    e.Handled = False
+                Else
+                    e.Handled = True
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub txtAmt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAmt.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 65 Or Asc(e.KeyChar) > 122 Then
+                If Asc(e.KeyChar) = 32 Then
+                    e.Handled = False
+                Else
+                    e.Handled = True
+                End If
+            End If
+        End If
     End Sub
 End Class

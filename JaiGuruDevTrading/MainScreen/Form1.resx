@@ -124,6 +124,17 @@
     <value>106, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAGYktHRAD/AP8A/6C9p5MAAAEwSURBVEhL7ZQ7TsNAGAYNoqLjdYNcBwqUGpBSUUFEQUGDgCJK
+        CRWP5DCh43EKBBwBBBJhJokX27FDYVdJRhrJ+df+1rv/OtGc2WEde/iN/ZKa8YBmBpro4Akel9QMsw4x
+        cIoWq8IsMwPxBJu4ZCHBBh5hcskLuI+1wa8/fNaMsQl28AsdeMQVjDHcutsohl+htV0LI9bwCa1/opkp
+        lrGODl5bGJFcwSJ20JAzTHKLH7iNZhXSxZfhZQrD79DwcwsZXtHxf/Gmt+FlwHDfsChc3tF7CrFBeVvk
+        nt+g4RcWIK/xvli8RdmDMmjIDxqSbfIeWr9EJ5Ns48UmP6N1s1JNnnRMPYoNjMMlbwXis1toVu53UBVj
+        E/hZW2xjq6RmmHWAAffvHh2oQv84V3HO9BNFv3ZbemEgntcAAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="Btn_CVoucher.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

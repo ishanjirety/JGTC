@@ -28,6 +28,7 @@ Partial Class Form1
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Vouchers = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Btn_CVoucher = New System.Windows.Forms.Button()
         Me.Btn_Jvoucher = New System.Windows.Forms.Button()
         Me.Btn_SVoucher = New System.Windows.Forms.Button()
@@ -35,15 +36,14 @@ Partial Class Form1
         Me.Inventory = New System.Windows.Forms.Panel()
         Me.Btn_invManage = New System.Windows.Forms.Button()
         Me.Btn_viewInv = New System.Windows.Forms.Button()
-        Me.PR = New System.Windows.Forms.Panel()
         Me.Accounts = New System.Windows.Forms.Panel()
         Me.Btn_Gst = New System.Windows.Forms.Button()
         Me.Btn_BS = New System.Windows.Forms.Button()
         Me.Btn_CB = New System.Windows.Forms.Button()
         Me.Btn_dep = New System.Windows.Forms.Button()
         Me.Btn_deb = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ViewLedger = New System.Windows.Forms.Button()
-        Me.Btn_journal = New System.Windows.Forms.Button()
         Me.PannelBill = New System.Windows.Forms.Panel()
         Me.Btn_challan = New System.Windows.Forms.Button()
         Me.RetailBtn = New System.Windows.Forms.Button()
@@ -94,7 +94,6 @@ Partial Class Form1
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Vouchers)
         Me.Panel2.Controls.Add(Me.Inventory)
-        Me.Panel2.Controls.Add(Me.PR)
         Me.Panel2.Controls.Add(Me.Accounts)
         Me.Panel2.Controls.Add(Me.PannelBill)
         Me.Panel2.Controls.Add(Me.Panel5)
@@ -107,14 +106,31 @@ Partial Class Form1
         'Vouchers
         '
         Me.Vouchers.BackColor = System.Drawing.Color.Transparent
+        Me.Vouchers.Controls.Add(Me.Button4)
         Me.Vouchers.Controls.Add(Me.Btn_CVoucher)
         Me.Vouchers.Controls.Add(Me.Btn_Jvoucher)
         Me.Vouchers.Controls.Add(Me.Btn_SVoucher)
         Me.Vouchers.Controls.Add(Me.Btn_PurVoucher)
-        Me.Vouchers.Location = New System.Drawing.Point(0, 481)
+        Me.Vouchers.Location = New System.Drawing.Point(0, 544)
         Me.Vouchers.Name = "Vouchers"
-        Me.Vouchers.Size = New System.Drawing.Size(216, 36)
+        Me.Vouchers.Size = New System.Drawing.Size(216, 42)
         Me.Vouchers.TabIndex = 17
+        '
+        'Button4
+        '
+        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(0, 144)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(216, 36)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "View Vouchers"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Btn_CVoucher
         '
@@ -185,7 +201,7 @@ Partial Class Form1
         Me.Inventory.BackColor = System.Drawing.Color.Transparent
         Me.Inventory.Controls.Add(Me.Btn_invManage)
         Me.Inventory.Controls.Add(Me.Btn_viewInv)
-        Me.Inventory.Location = New System.Drawing.Point(1, 523)
+        Me.Inventory.Location = New System.Drawing.Point(1, 619)
         Me.Inventory.Name = "Inventory"
         Me.Inventory.Size = New System.Drawing.Size(214, 82)
         Me.Inventory.TabIndex = 17
@@ -222,13 +238,6 @@ Partial Class Form1
         Me.Btn_viewInv.Text = "View Inventory"
         Me.Btn_viewInv.UseVisualStyleBackColor = True
         '
-        'PR
-        '
-        Me.PR.Location = New System.Drawing.Point(0, 605)
-        Me.PR.Name = "PR"
-        Me.PR.Size = New System.Drawing.Size(216, 90)
-        Me.PR.TabIndex = 17
-        '
         'Accounts
         '
         Me.Accounts.BackColor = System.Drawing.Color.Transparent
@@ -237,11 +246,11 @@ Partial Class Form1
         Me.Accounts.Controls.Add(Me.Btn_CB)
         Me.Accounts.Controls.Add(Me.Btn_dep)
         Me.Accounts.Controls.Add(Me.Btn_deb)
+        Me.Accounts.Controls.Add(Me.Button5)
         Me.Accounts.Controls.Add(Me.ViewLedger)
-        Me.Accounts.Controls.Add(Me.Btn_journal)
         Me.Accounts.Location = New System.Drawing.Point(1, 190)
         Me.Accounts.Name = "Accounts"
-        Me.Accounts.Size = New System.Drawing.Size(214, 285)
+        Me.Accounts.Size = New System.Drawing.Size(214, 268)
         Me.Accounts.TabIndex = 8
         '
         'Btn_Gst
@@ -256,7 +265,7 @@ Partial Class Form1
         Me.Btn_Gst.Location = New System.Drawing.Point(0, 216)
         Me.Btn_Gst.Name = "Btn_Gst"
         Me.Btn_Gst.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_Gst.TabIndex = 22
+        Me.Btn_Gst.TabIndex = 28
         Me.Btn_Gst.Text = "GST"
         Me.Btn_Gst.UseVisualStyleBackColor = True
         '
@@ -272,7 +281,7 @@ Partial Class Form1
         Me.Btn_BS.Location = New System.Drawing.Point(0, 180)
         Me.Btn_BS.Name = "Btn_BS"
         Me.Btn_BS.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_BS.TabIndex = 21
+        Me.Btn_BS.TabIndex = 27
         Me.Btn_BS.Text = "Balance Sheet"
         Me.Btn_BS.UseVisualStyleBackColor = True
         '
@@ -288,7 +297,7 @@ Partial Class Form1
         Me.Btn_CB.Location = New System.Drawing.Point(0, 144)
         Me.Btn_CB.Name = "Btn_CB"
         Me.Btn_CB.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_CB.TabIndex = 20
+        Me.Btn_CB.TabIndex = 26
         Me.Btn_CB.Text = "Cash Book"
         Me.Btn_CB.UseVisualStyleBackColor = True
         '
@@ -304,7 +313,7 @@ Partial Class Form1
         Me.Btn_dep.Location = New System.Drawing.Point(0, 108)
         Me.Btn_dep.Name = "Btn_dep"
         Me.Btn_dep.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_dep.TabIndex = 19
+        Me.Btn_dep.TabIndex = 25
         Me.Btn_dep.Text = "Depriciation"
         Me.Btn_dep.UseVisualStyleBackColor = True
         '
@@ -320,9 +329,25 @@ Partial Class Form1
         Me.Btn_deb.Location = New System.Drawing.Point(0, 72)
         Me.Btn_deb.Name = "Btn_deb"
         Me.Btn_deb.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_deb.TabIndex = 18
+        Me.Btn_deb.TabIndex = 24
         Me.Btn_deb.Text = "Debitor"
         Me.Btn_deb.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 36)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(214, 36)
+        Me.Button5.TabIndex = 23
+        Me.Button5.Text = "Create Ledger"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'ViewLedger
         '
@@ -333,28 +358,12 @@ Partial Class Form1
         Me.ViewLedger.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ViewLedger.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.ViewLedger.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ViewLedger.Location = New System.Drawing.Point(0, 36)
+        Me.ViewLedger.Location = New System.Drawing.Point(0, 0)
         Me.ViewLedger.Name = "ViewLedger"
         Me.ViewLedger.Size = New System.Drawing.Size(214, 36)
         Me.ViewLedger.TabIndex = 17
-        Me.ViewLedger.Text = "View Ledgers"
+        Me.ViewLedger.Text = "View Ledgers / Journal"
         Me.ViewLedger.UseVisualStyleBackColor = True
-        '
-        'Btn_journal
-        '
-        Me.Btn_journal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Btn_journal.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Btn_journal.FlatAppearance.BorderSize = 0
-        Me.Btn_journal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_journal.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_journal.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Btn_journal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_journal.Location = New System.Drawing.Point(0, 0)
-        Me.Btn_journal.Name = "Btn_journal"
-        Me.Btn_journal.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_journal.TabIndex = 0
-        Me.Btn_journal.Text = "Journal"
-        Me.Btn_journal.UseVisualStyleBackColor = True
         '
         'PannelBill
         '
@@ -379,7 +388,7 @@ Partial Class Form1
         Me.Btn_challan.Name = "Btn_challan"
         Me.Btn_challan.Size = New System.Drawing.Size(215, 30)
         Me.Btn_challan.TabIndex = 1
-        Me.Btn_challan.Text = "Challan"
+        Me.Btn_challan.Text = "Kisan Bill"
         Me.Btn_challan.UseVisualStyleBackColor = True
         '
         'RetailBtn
@@ -395,7 +404,7 @@ Partial Class Form1
         Me.RetailBtn.Name = "RetailBtn"
         Me.RetailBtn.Size = New System.Drawing.Size(215, 36)
         Me.RetailBtn.TabIndex = 0
-        Me.RetailBtn.Text = "   Retail Bill"
+        Me.RetailBtn.Text = "Vyapari Bill"
         Me.RetailBtn.UseVisualStyleBackColor = True
         '
         'Panel5
@@ -789,7 +798,6 @@ Partial Class Form1
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Accounts As Panel
-    Friend WithEvents Btn_journal As Button
     Friend WithEvents PannelBill As Panel
     Friend WithEvents Btn_challan As Button
     Friend WithEvents RetailBtn As Button
@@ -820,7 +828,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Vouchers As Panel
-    Friend WithEvents PR As Panel
     Friend WithEvents Inventory As Panel
     Friend WithEvents Btn_CVoucher As Button
     Friend WithEvents Btn_Jvoucher As Button
@@ -829,6 +836,8 @@ Partial Class Form1
     Friend WithEvents Btn_invManage As Button
     Friend WithEvents Btn_viewInv As Button
     Friend WithEvents ViewLedger As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
     Friend WithEvents Btn_Gst As Button
     Friend WithEvents Btn_BS As Button
     Friend WithEvents Btn_CB As Button

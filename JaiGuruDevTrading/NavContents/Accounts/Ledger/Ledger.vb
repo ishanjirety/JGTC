@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Module LedgerManagement
-    Public Sub CREATE_LEDGER(ByVal NAME, ByVal AFFECTSINV, ByVal CUSNAME, ByVal ADDRESS, ByVal MOBILE, ByVal BANKDETAILS)
+    Public Sub CREATE_LEDGER(ByVal NAME, ByVal AFFECTSINV, ByVal CUSNAME, ByVal ADDRESS, ByVal MOBILE, ByVal BANKDETAILS, ByVal Category)
         Dim bool As Boolean = check(NAME)
         If bool = True Then
             conn.Close()
@@ -11,17 +11,17 @@ Module LedgerManagement
                 Dim dr As MySqlDataReader = cmd.ExecuteReader
                 MsgBox("Ledger " + NAME + " Created Successfully", MsgBoxStyle.Information)
                 conn.Close()
-                MAKE_LEDGER_ENTRY(NAME, AFFECTSINV, CUSNAME, ADDRESS, MOBILE, BANKDETAILS)
+                MAKE_LEDGER_ENTRY(NAME, AFFECTSINV, CUSNAME, ADDRESS, MOBILE, BANKDETAILS, Category)
             Catch ex As Exception
                 MsgBox("UNEXPECTED ERROR OCCURED " + ex.Message)
             End Try
         End If
     End Sub
-    Private Sub MAKE_LEDGER_ENTRY(ByVal NAME, ByVal AFFECTSINV, ByVal CUSNAME, ByVal ADDRESS, ByVal MOBILE, ByVal BANKDETAILS)
+    Private Sub MAKE_LEDGER_ENTRY(ByVal NAME, ByVal AFFECTSINV, ByVal CUSNAME, ByVal ADDRESS, ByVal MOBILE, ByVal BANKDETAILS, ByVal Category)
         conn.Close()
         conn.Open()
         Try
-            Dim str As String = "INSERT INTO `ledgernames` (`Name`, `AffectsInventory`, `CUSNAME`, `ADDRESS`, `MOBILE`, `BANKDETAILS`,`DateOfCreation`) VALUES ('" + NAME + "', '" + AFFECTSINV + "', '" + CUSNAME + "', '" + ADDRESS + "', '" + MOBILE + "', '" + BANKDETAILS + "','" + DateTime.Now + "')"
+            Dim str As String = "INSERT INTO `ledgernames` (`Name`, `AffectsInventory`, `CUSNAME`, `ADDRESS`, `MOBILE`, `BANKDETAILS`,`Category`,`DateOfCreation`) VALUES ('" + NAME + "', '" + AFFECTSINV + "', '" + CUSNAME + "', '" + ADDRESS + "', '" + MOBILE + "', '" + BANKDETAILS + "','" + category + "','" + DateTime.Now + "')"
             Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             conn.Close()

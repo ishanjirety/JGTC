@@ -45,11 +45,36 @@
             .Show()
         End With
     End Sub
-
-    Private Sub PanelContent_Paint(sender As Object, e As PaintEventArgs) Handles PanelContent.Paint
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        PanelContent.Controls.Clear()
+        With SetAccountingYear
+            .TopLevel = False
+            PanelContent.Controls.Add(SetAccountingYear)
+            .BringToFront()
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
     End Sub
 
-    Private Sub Btn_Truncate_Click(sender As Object, e As EventArgs) Handles Btn_Truncate.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        PanelContent.Controls.Clear()
+        With MessageBody
+            .TopLevel = False
+            PanelContent.Controls.Add(MessageBody)
+            .BringToFront()
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        PanelContent.Controls.Clear()
+        With DepriciationMethod
+            .TopLevel = False
+            PanelContent.Controls.Add(DepriciationMethod)
+            .BringToFront()
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
     End Sub
 End Class

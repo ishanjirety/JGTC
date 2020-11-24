@@ -19,7 +19,6 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bi
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\bin\Debug\MySql.Data.xml
-C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.exe.config
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Create_Led.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.add.resources
@@ -49,3 +48,9 @@ C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\ob
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.pdb
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.View_Ledgers.resources
 C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.SalesVoucher.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.SetAccountingYear.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.Kisan.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.ChoosePrinter.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.vbprojAssemblyReference.cache
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.MessageBody.resources
+C:\Users\ADMIN\Desktop\JaiGuruDev_Trading\JaiGuruDevTrading\JaiGuruDevTrading\obj\Debug\JaiGuruDevTrading.DepriciationMethod.resources

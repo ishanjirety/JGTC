@@ -37,6 +37,7 @@ Partial Class PurchaseVoucher
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.ListBox4 = New System.Windows.Forms.ListBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.TotalAmount = New System.Windows.Forms.TextBox()
@@ -45,6 +46,9 @@ Partial Class PurchaseVoucher
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -66,6 +70,8 @@ Partial Class PurchaseVoucher
         Me.Panel5.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel10.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -192,6 +198,7 @@ Partial Class PurchaseVoucher
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.ListBox3)
         Me.Panel4.Controls.Add(Me.ListBox2)
+        Me.Panel4.Controls.Add(Me.ListBox4)
         Me.Panel4.Controls.Add(Me.ListBox1)
         Me.Panel4.Controls.Add(Me.Panel9)
         Me.Panel4.Controls.Add(Me.Panel5)
@@ -207,25 +214,34 @@ Partial Class PurchaseVoucher
         Me.ListBox3.FormattingEnabled = True
         Me.ListBox3.Location = New System.Drawing.Point(0, 28)
         Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(97, 245)
-        Me.ListBox3.TabIndex = 9
+        Me.ListBox3.Size = New System.Drawing.Size(169, 245)
+        Me.ListBox3.TabIndex = 12
         '
         'ListBox2
         '
         Me.ListBox2.Dock = System.Windows.Forms.DockStyle.Right
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(97, 28)
+        Me.ListBox2.Location = New System.Drawing.Point(169, 28)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(191, 245)
-        Me.ListBox2.TabIndex = 8
+        Me.ListBox2.Size = New System.Drawing.Size(96, 245)
+        Me.ListBox2.TabIndex = 11
+        '
+        'ListBox4
+        '
+        Me.ListBox4.Dock = System.Windows.Forms.DockStyle.Right
+        Me.ListBox4.FormattingEnabled = True
+        Me.ListBox4.Location = New System.Drawing.Point(265, 28)
+        Me.ListBox4.Name = "ListBox4"
+        Me.ListBox4.Size = New System.Drawing.Size(95, 245)
+        Me.ListBox4.TabIndex = 10
         '
         'ListBox1
         '
         Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(288, 28)
+        Me.ListBox1.Location = New System.Drawing.Point(360, 28)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(215, 245)
+        Me.ListBox1.Size = New System.Drawing.Size(143, 245)
         Me.ListBox1.TabIndex = 7
         '
         'Panel9
@@ -281,7 +297,7 @@ Partial Class PurchaseVoucher
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(0, 0)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(96, 26)
+        Me.Panel8.Size = New System.Drawing.Size(168, 26)
         Me.Panel8.TabIndex = 5
         '
         'Label7
@@ -297,31 +313,62 @@ Partial Class PurchaseVoucher
         'Panel7
         '
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.Label8)
+        Me.Panel7.Controls.Add(Me.Panel11)
+        Me.Panel7.Controls.Add(Me.Panel10)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel7.Location = New System.Drawing.Point(96, 0)
+        Me.Panel7.Location = New System.Drawing.Point(168, 0)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(191, 26)
         Me.Panel7.TabIndex = 4
+        '
+        'Panel11
+        '
+        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel11.Controls.Add(Me.Label5)
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel11.Location = New System.Drawing.Point(0, 0)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(95, 24)
+        Me.Panel11.TabIndex = 4
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(4, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(62, 13)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "QUANTITY"
+        '
+        'Panel10
+        '
+        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Controls.Add(Me.Label8)
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel10.Location = New System.Drawing.Point(95, 0)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(94, 24)
+        Me.Panel10.TabIndex = 3
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(3, 6)
+        Me.Label8.Location = New System.Drawing.Point(5, 4)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(62, 13)
+        Me.Label8.Size = New System.Drawing.Size(36, 13)
         Me.Label8.TabIndex = 2
-        Me.Label8.Text = "QUANTITY"
+        Me.Label8.Text = "RATE"
         '
         'Panel6
         '
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel6.Controls.Add(Me.Label9)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(287, 0)
+        Me.Panel6.Location = New System.Drawing.Point(359, 0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(214, 26)
+        Me.Panel6.Size = New System.Drawing.Size(142, 26)
         Me.Panel6.TabIndex = 1
         '
         'Label9
@@ -461,7 +508,10 @@ Partial Class PurchaseVoucher
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -491,7 +541,6 @@ Partial Class PurchaseVoucher
     Friend WithEvents txtItemName As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label8 As Label
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents btn_clr As Button
@@ -499,11 +548,16 @@ Partial Class PurchaseVoucher
     Friend WithEvents btn_create As Button
     Friend WithEvents txtAmt As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents ListBox3 As ListBox
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label13 As Label
     Friend WithEvents TotalAmount As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label8 As Label
 End Class

@@ -2,17 +2,21 @@
     Public OpenedBy As String
     Private Sub fire_Click(sender As Object, e As EventArgs) Handles fire.Click
         If CusNAME.Text <> Nothing And CusMOB.Text <> Nothing And CusADDR.Text <> Nothing And CusBank.Text <> Nothing Then
-            CREATE_LEDGER(LedNAME.Text, ComboBox1.Text, CusNAME.Text, CusADDR.Text, CusMOB.Text, CusBank.Text)
+            CREATE_LEDGER(LedNAME.Text, ComboBox1.Text, CusNAME.Text, CusADDR.Text, CusMOB.Text, CusBank.Text, ComboBox2.Text)
             FillLedgerData()
             If OpenedBy = "PV" Then
                 PurchaseVoucher.btn_create.PerformClick()
                 Me.Close()
+            ElseIf OpenedBy = "SV" Then
+                SalesVoucher.btn_create.PerformClick()
+                SalesVoucher.redirection()
+                Me.Close()
             End If
         Else
-            If OpenedBy = "PV" Then
+            If OpenedBy = "PV" Or OpenedBy = "SV" Then
                 MsgBox("All Details Are Mandatory", MsgBoxStyle.Exclamation)
             Else
-                CREATE_LEDGER(LedNAME.Text, ComboBox1.Text, "NULL", "NULL", "NULL", "NULL")
+                CREATE_LEDGER(LedNAME.Text, ComboBox1.Text, "NULL", "NULL", "NULL", "NULL", ComboBox2.Text)
                 FillLedgerData()
             End If
 
@@ -37,6 +41,10 @@
     End Sub
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

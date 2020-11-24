@@ -35,12 +35,14 @@ Partial Class View_Ledgers
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Panel22 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel21 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -48,42 +50,46 @@ Partial Class View_Ledgers
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel18 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel19 = New System.Windows.Forms.Panel()
+        Me.drTotal = New System.Windows.Forms.TextBox()
+        Me.crTotal = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.ListBox7 = New System.Windows.Forms.ListBox()
         Me.ListBox8 = New System.Windows.Forms.ListBox()
         Me.ListBox9 = New System.Windows.Forms.ListBox()
         Me.ListBox10 = New System.Windows.Forms.ListBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.crTotal = New System.Windows.Forms.TextBox()
-        Me.drTotal = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel9.SuspendLayout()
+        Me.Panel22.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
+        Me.Panel21.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel11.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel15.SuspendLayout()
         Me.Panel16.SuspendLayout()
         Me.Panel17.SuspendLayout()
+        Me.Panel14.SuspendLayout()
         Me.Panel18.SuspendLayout()
         Me.Panel19.SuspendLayout()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -127,10 +133,10 @@ Partial Class View_Ledgers
         '
         Me.ListBox6.Dock = System.Windows.Forms.DockStyle.Left
         Me.ListBox6.FormattingEnabled = True
-        Me.ListBox6.Location = New System.Drawing.Point(714, 58)
+        Me.ListBox6.Location = New System.Drawing.Point(715, 58)
         Me.ListBox6.Name = "ListBox6"
-        Me.ListBox6.Size = New System.Drawing.Size(159, 354)
-        Me.ListBox6.TabIndex = 9
+        Me.ListBox6.Size = New System.Drawing.Size(160, 354)
+        Me.ListBox6.TabIndex = 17
         '
         'ListBox5
         '
@@ -138,26 +144,26 @@ Partial Class View_Ledgers
         Me.ListBox5.FormattingEnabled = True
         Me.ListBox5.Location = New System.Drawing.Point(543, 58)
         Me.ListBox5.Name = "ListBox5"
-        Me.ListBox5.Size = New System.Drawing.Size(171, 354)
-        Me.ListBox5.TabIndex = 8
+        Me.ListBox5.Size = New System.Drawing.Size(172, 354)
+        Me.ListBox5.TabIndex = 14
         '
         'ListBox4
         '
         Me.ListBox4.Dock = System.Windows.Forms.DockStyle.Left
         Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(423, 58)
+        Me.ListBox4.Location = New System.Drawing.Point(422, 58)
         Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(120, 354)
-        Me.ListBox4.TabIndex = 7
+        Me.ListBox4.Size = New System.Drawing.Size(121, 354)
+        Me.ListBox4.TabIndex = 13
         '
         'ListBox3
         '
         Me.ListBox3.Dock = System.Windows.Forms.DockStyle.Left
         Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(263, 58)
+        Me.ListBox3.Location = New System.Drawing.Point(262, 58)
         Me.ListBox3.Name = "ListBox3"
         Me.ListBox3.Size = New System.Drawing.Size(160, 354)
-        Me.ListBox3.TabIndex = 6
+        Me.ListBox3.TabIndex = 12
         '
         'ListBox2
         '
@@ -165,8 +171,8 @@ Partial Class View_Ledgers
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.Location = New System.Drawing.Point(104, 58)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(159, 354)
-        Me.ListBox2.TabIndex = 5
+        Me.ListBox2.Size = New System.Drawing.Size(158, 354)
+        Me.ListBox2.TabIndex = 10
         '
         'ListBox1
         '
@@ -214,20 +220,30 @@ Partial Class View_Ledgers
         'Panel9
         '
         Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel9.Controls.Add(Me.Label9)
+        Me.Panel9.Controls.Add(Me.Panel22)
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel9.Location = New System.Drawing.Point(543, 0)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(171, 26)
         Me.Panel9.TabIndex = 4
         '
+        'Panel22
+        '
+        Me.Panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel22.Controls.Add(Me.Label9)
+        Me.Panel22.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel22.Location = New System.Drawing.Point(0, 0)
+        Me.Panel22.Name = "Panel22"
+        Me.Panel22.Size = New System.Drawing.Size(169, 24)
+        Me.Panel22.TabIndex = 4
+        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 6)
+        Me.Label9.Location = New System.Drawing.Point(4, 5)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 13)
-        Me.Label9.TabIndex = 0
+        Me.Label9.TabIndex = 1
         Me.Label9.Text = "PARTICULAR"
         '
         'Panel8
@@ -271,20 +287,30 @@ Partial Class View_Ledgers
         'Panel6
         '
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Controls.Add(Me.Label6)
+        Me.Panel6.Controls.Add(Me.Panel21)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel6.Location = New System.Drawing.Point(103, 0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(159, 26)
         Me.Panel6.TabIndex = 1
         '
+        'Panel21
+        '
+        Me.Panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel21.Controls.Add(Me.Label6)
+        Me.Panel21.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel21.Location = New System.Drawing.Point(0, 0)
+        Me.Panel21.Name = "Panel21"
+        Me.Panel21.Size = New System.Drawing.Size(157, 24)
+        Me.Panel21.TabIndex = 2
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(5, 6)
+        Me.Label6.Location = New System.Drawing.Point(4, 5)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 13)
-        Me.Label6.TabIndex = 0
+        Me.Label6.TabIndex = 1
         Me.Label6.Text = "PARTICULAR"
         '
         'Panel5
@@ -346,27 +372,6 @@ Partial Class View_Ledgers
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Choose Ledger"
         '
-        'Panel11
-        '
-        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel11.Controls.Add(Me.Label3)
-        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel11.Location = New System.Drawing.Point(876, 36)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(504, 30)
-        Me.Panel11.TabIndex = 4
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(211, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "JOURNAL"
-        '
         'Panel12
         '
         Me.Panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -385,9 +390,9 @@ Partial Class View_Ledgers
         Me.Panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel15.Controls.Add(Me.Label13)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel15.Location = New System.Drawing.Point(364, 0)
+        Me.Panel15.Location = New System.Drawing.Point(375, 0)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(139, 26)
+        Me.Panel15.Size = New System.Drawing.Size(128, 26)
         Me.Panel15.TabIndex = 3
         '
         'Label13
@@ -404,9 +409,9 @@ Partial Class View_Ledgers
         Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel16.Controls.Add(Me.Label14)
         Me.Panel16.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel16.Location = New System.Drawing.Point(235, 0)
+        Me.Panel16.Location = New System.Drawing.Point(262, 0)
         Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(129, 26)
+        Me.Panel16.Size = New System.Drawing.Size(113, 26)
         Me.Panel16.TabIndex = 2
         '
         'Label14
@@ -421,20 +426,30 @@ Partial Class View_Ledgers
         'Panel17
         '
         Me.Panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel17.Controls.Add(Me.Label15)
+        Me.Panel17.Controls.Add(Me.Panel14)
         Me.Panel17.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel17.Location = New System.Drawing.Point(79, 0)
         Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(156, 26)
+        Me.Panel17.Size = New System.Drawing.Size(183, 26)
         Me.Panel17.TabIndex = 1
+        '
+        'Panel14
+        '
+        Me.Panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel14.Controls.Add(Me.Label15)
+        Me.Panel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel14.Location = New System.Drawing.Point(0, 0)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(181, 24)
+        Me.Panel14.TabIndex = 2
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(5, 6)
+        Me.Label15.Location = New System.Drawing.Point(4, 5)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(75, 13)
-        Me.Label15.TabIndex = 0
+        Me.Label15.TabIndex = 1
         Me.Label15.Text = "PARTICULAR"
         '
         'Panel18
@@ -468,6 +483,36 @@ Partial Class View_Ledgers
         Me.Panel19.Size = New System.Drawing.Size(504, 23)
         Me.Panel19.TabIndex = 6
         '
+        'drTotal
+        '
+        Me.drTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.drTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.drTotal.Location = New System.Drawing.Point(321, 0)
+        Me.drTotal.Name = "drTotal"
+        Me.drTotal.ReadOnly = True
+        Me.drTotal.Size = New System.Drawing.Size(85, 20)
+        Me.drTotal.TabIndex = 1
+        '
+        'crTotal
+        '
+        Me.crTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.crTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.crTotal.Location = New System.Drawing.Point(438, -2)
+        Me.crTotal.Name = "crTotal"
+        Me.crTotal.ReadOnly = True
+        Me.crTotal.Size = New System.Drawing.Size(62, 20)
+        Me.crTotal.TabIndex = 1
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(5, 3)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(42, 13)
+        Me.Label17.TabIndex = 0
+        Me.Label17.Text = "TOTAL"
+        '
         'ListBox7
         '
         Me.ListBox7.Dock = System.Windows.Forms.DockStyle.Left
@@ -483,56 +528,47 @@ Partial Class View_Ledgers
         Me.ListBox8.FormattingEnabled = True
         Me.ListBox8.Location = New System.Drawing.Point(956, 94)
         Me.ListBox8.Name = "ListBox8"
-        Me.ListBox8.Size = New System.Drawing.Size(156, 333)
-        Me.ListBox8.TabIndex = 11
+        Me.ListBox8.Size = New System.Drawing.Size(182, 333)
+        Me.ListBox8.TabIndex = 18
         '
         'ListBox9
         '
         Me.ListBox9.Dock = System.Windows.Forms.DockStyle.Left
         Me.ListBox9.FormattingEnabled = True
-        Me.ListBox9.Location = New System.Drawing.Point(1112, 94)
+        Me.ListBox9.Location = New System.Drawing.Point(1138, 94)
         Me.ListBox9.Name = "ListBox9"
-        Me.ListBox9.Size = New System.Drawing.Size(129, 333)
-        Me.ListBox9.TabIndex = 12
+        Me.ListBox9.Size = New System.Drawing.Size(113, 333)
+        Me.ListBox9.TabIndex = 20
         '
         'ListBox10
         '
         Me.ListBox10.Dock = System.Windows.Forms.DockStyle.Left
         Me.ListBox10.FormattingEnabled = True
-        Me.ListBox10.Location = New System.Drawing.Point(1241, 94)
+        Me.ListBox10.Location = New System.Drawing.Point(1251, 94)
         Me.ListBox10.Name = "ListBox10"
-        Me.ListBox10.Size = New System.Drawing.Size(139, 333)
-        Me.ListBox10.TabIndex = 13
+        Me.ListBox10.Size = New System.Drawing.Size(128, 333)
+        Me.ListBox10.TabIndex = 21
         '
-        'Label17
+        'Label3
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(5, 3)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(42, 13)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "TOTAL"
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(211, 8)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 13)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "JOURNAL"
         '
-        'crTotal
+        'Panel11
         '
-        Me.crTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.crTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.crTotal.Location = New System.Drawing.Point(415, -2)
-        Me.crTotal.Name = "crTotal"
-        Me.crTotal.ReadOnly = True
-        Me.crTotal.Size = New System.Drawing.Size(85, 20)
-        Me.crTotal.TabIndex = 1
-        '
-        'drTotal
-        '
-        Me.drTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.drTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.drTotal.Location = New System.Drawing.Point(295, -1)
-        Me.drTotal.Name = "drTotal"
-        Me.drTotal.ReadOnly = True
-        Me.drTotal.Size = New System.Drawing.Size(85, 20)
-        Me.drTotal.TabIndex = 1
+        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel11.Controls.Add(Me.Label3)
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel11.Location = New System.Drawing.Point(876, 36)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(504, 30)
+        Me.Panel11.TabIndex = 4
         '
         'View_Ledgers
         '
@@ -558,30 +594,33 @@ Partial Class View_Ledgers
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
         Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
+        Me.Panel22.ResumeLayout(False)
+        Me.Panel22.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
+        Me.Panel21.ResumeLayout(False)
+        Me.Panel21.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
         Me.Panel12.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
         Me.Panel16.ResumeLayout(False)
         Me.Panel16.PerformLayout()
         Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
+        Me.Panel14.ResumeLayout(False)
+        Me.Panel14.PerformLayout()
         Me.Panel18.ResumeLayout(False)
         Me.Panel18.PerformLayout()
         Me.Panel19.ResumeLayout(False)
         Me.Panel19.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -595,11 +634,6 @@ Partial Class View_Ledgers
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ListBox6 As ListBox
-    Friend WithEvents ListBox5 As ListBox
-    Friend WithEvents ListBox4 As ListBox
-    Friend WithEvents ListBox3 As ListBox
-    Friend WithEvents ListBox2 As ListBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel9 As Panel
@@ -607,28 +641,36 @@ Partial Class View_Ledgers
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents Label3 As Label
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel17 As Panel
-    Friend WithEvents Label15 As Label
     Friend WithEvents Panel18 As Panel
     Friend WithEvents Label16 As Label
     Friend WithEvents Panel19 As Panel
     Friend WithEvents ListBox7 As ListBox
-    Friend WithEvents ListBox8 As ListBox
-    Friend WithEvents ListBox9 As ListBox
-    Friend WithEvents ListBox10 As ListBox
     Friend WithEvents Label17 As Label
     Friend WithEvents drTotal As TextBox
     Friend WithEvents crTotal As TextBox
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Label15 As Label
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents ListBox5 As ListBox
+    Friend WithEvents ListBox6 As ListBox
+    Friend WithEvents Panel21 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Panel22 As Panel
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ListBox8 As ListBox
+    Friend WithEvents ListBox9 As ListBox
+    Friend WithEvents ListBox10 As ListBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel11 As Panel
 End Class

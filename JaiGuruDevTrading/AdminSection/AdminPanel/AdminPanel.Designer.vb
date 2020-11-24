@@ -23,8 +23,10 @@ Partial Class AdminPanel
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelControl = New System.Windows.Forms.Panel()
-        Me.Btn_Dump = New System.Windows.Forms.Button()
         Me.Btn_Truncate = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Btn_Create = New System.Windows.Forms.Button()
         Me.Btn_logs = New System.Windows.Forms.Button()
         Me.Btn_roles = New System.Windows.Forms.Button()
@@ -36,8 +38,10 @@ Partial Class AdminPanel
         'PanelControl
         '
         Me.PanelControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelControl.Controls.Add(Me.Btn_Dump)
         Me.PanelControl.Controls.Add(Me.Btn_Truncate)
+        Me.PanelControl.Controls.Add(Me.Button1)
+        Me.PanelControl.Controls.Add(Me.Button3)
+        Me.PanelControl.Controls.Add(Me.Button2)
         Me.PanelControl.Controls.Add(Me.Btn_Create)
         Me.PanelControl.Controls.Add(Me.Btn_logs)
         Me.PanelControl.Controls.Add(Me.Btn_roles)
@@ -48,31 +52,54 @@ Partial Class AdminPanel
         Me.PanelControl.Size = New System.Drawing.Size(180, 450)
         Me.PanelControl.TabIndex = 16
         '
-        'Btn_Dump
-        '
-        Me.Btn_Dump.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Btn_Dump.FlatAppearance.BorderSize = 0
-        Me.Btn_Dump.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_Dump.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Dump.Location = New System.Drawing.Point(0, 155)
-        Me.Btn_Dump.Name = "Btn_Dump"
-        Me.Btn_Dump.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_Dump.TabIndex = 5
-        Me.Btn_Dump.Text = "Turn Of Messaging Services"
-        Me.Btn_Dump.UseVisualStyleBackColor = True
-        '
         'Btn_Truncate
         '
         Me.Btn_Truncate.Dock = System.Windows.Forms.DockStyle.Top
         Me.Btn_Truncate.FlatAppearance.BorderSize = 0
         Me.Btn_Truncate.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Truncate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Btn_Truncate.Location = New System.Drawing.Point(0, 124)
+        Me.Btn_Truncate.Location = New System.Drawing.Point(0, 223)
         Me.Btn_Truncate.Name = "Btn_Truncate"
         Me.Btn_Truncate.Size = New System.Drawing.Size(178, 31)
-        Me.Btn_Truncate.TabIndex = 4
-        Me.Btn_Truncate.Text = "Truncate Table"
+        Me.Btn_Truncate.TabIndex = 13
+        Me.Btn_Truncate.Text = "TRUNCATE TABLE"
         Me.Btn_Truncate.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(0, 192)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(178, 31)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "SET ACCOUNTING YEAR"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Location = New System.Drawing.Point(0, 155)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(178, 37)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "SET DEPRICIATION METHOD"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Location = New System.Drawing.Point(0, 124)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(178, 31)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "CREATE RETAIL MESSAGE"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Btn_Create
         '
@@ -83,7 +110,7 @@ Partial Class AdminPanel
         Me.Btn_Create.Name = "Btn_Create"
         Me.Btn_Create.Size = New System.Drawing.Size(178, 31)
         Me.Btn_Create.TabIndex = 3
-        Me.Btn_Create.Text = "Create User"
+        Me.Btn_Create.Text = "CREATE USER"
         Me.Btn_Create.UseVisualStyleBackColor = True
         '
         'Btn_logs
@@ -95,7 +122,7 @@ Partial Class AdminPanel
         Me.Btn_logs.Name = "Btn_logs"
         Me.Btn_logs.Size = New System.Drawing.Size(178, 31)
         Me.Btn_logs.TabIndex = 2
-        Me.Btn_logs.Text = "Logs"
+        Me.Btn_logs.Text = "LOGS"
         Me.Btn_logs.UseVisualStyleBackColor = True
         '
         'Btn_roles
@@ -107,7 +134,7 @@ Partial Class AdminPanel
         Me.Btn_roles.Name = "Btn_roles"
         Me.Btn_roles.Size = New System.Drawing.Size(178, 31)
         Me.Btn_roles.TabIndex = 1
-        Me.Btn_roles.Text = "Roles"
+        Me.Btn_roles.Text = "ROLES"
         Me.Btn_roles.UseVisualStyleBackColor = True
         '
         'Btn_Usr
@@ -119,7 +146,7 @@ Partial Class AdminPanel
         Me.Btn_Usr.Name = "Btn_Usr"
         Me.Btn_Usr.Size = New System.Drawing.Size(178, 31)
         Me.Btn_Usr.TabIndex = 0
-        Me.Btn_Usr.Text = "UserManagement"
+        Me.Btn_Usr.Text = "USER MANAGEMENT"
         Me.Btn_Usr.UseVisualStyleBackColor = True
         '
         'PanelContent
@@ -151,6 +178,8 @@ Partial Class AdminPanel
     Friend WithEvents Btn_logs As Button
     Friend WithEvents PanelContent As Panel
     Friend WithEvents Btn_Create As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents Btn_Truncate As Button
-    Friend WithEvents Btn_Dump As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button3 As Button
 End Class

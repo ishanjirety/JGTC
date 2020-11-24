@@ -87,12 +87,13 @@ Public Class Form1
         Accounts.Dock = DockStyle.Fill
     End Sub
     Private Sub RetailBtn_Click_1(sender As Object, e As EventArgs) Handles RetailBtn.Click
-        'With UserCreationvb
-        '    .TopLevel = False
-        '    main.Controls.Add(UserCreationvb)
-        '    .BringToFront()
-        '    .Show()
-        'End With
+        With SalesVoucher
+            .TopLevel = False
+            main.Controls.Add(SalesVoucher)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         logout()
@@ -238,14 +239,6 @@ Public Class Form1
     Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs) Handles RetailBtn.MouseLeave
         RetailBtn.ForeColor = Color.Black
     End Sub
-
-    Private Sub Btn_journal_MouseEnter(sender As Object, e As EventArgs) Handles Btn_journal.MouseEnter
-        Btn_journal.ForeColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub Btn_journal_MouseLeave(sender As Object, e As EventArgs) Handles Btn_journal.MouseLeave
-        Btn_journal.ForeColor = Color.Black
-    End Sub
     Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs)
         Btn_deb.ForeColor = Color.DodgerBlue
     End Sub
@@ -358,6 +351,10 @@ Public Class Form1
         Create_Led.Close()
         ViewInventory.Close()
         UserCreationvb.Close()
+        AdminPanel.Close()
+        SalesVoucher.Close()
+        PurchaseVoucher.Close()
+        View_Ledgers.Close()
     End Sub
 
     Private Sub Btn_PurVoucher_Click(sender As Object, e As EventArgs) Handles Btn_PurVoucher.Click
@@ -381,8 +378,29 @@ Public Class Form1
             .Show()
         End With
     End Sub
+    Private Sub Btn_SVoucher_Click(sender As Object, e As EventArgs) Handles Btn_SVoucher.Click
+        CloseForms()
+        With SalesVoucher
+            .TopLevel = False
+            main.Controls.Add(SalesVoucher)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 
-    Private Sub main_Paint(sender As Object, e As PaintEventArgs) Handles main.Paint
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        CloseForms()
+        With Create_Led
+            .TopLevel = False
+            main.Controls.Add(Create_Led)
+            .Dock = DockStyle.Fill
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
+
+    Private Sub Btn_dep_Click(sender As Object, e As EventArgs) Handles Btn_dep.Click
 
     End Sub
 End Class

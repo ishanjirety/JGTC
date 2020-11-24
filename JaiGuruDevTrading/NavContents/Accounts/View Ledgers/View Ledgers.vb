@@ -1,5 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class View_Ledgers
+    Dim todaysdate As String = String.Format("{0:dd/MM/yyyy}", DateTime.Now)
+    Dim DBdate As String
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Clr()
         Label4.Text = ComboBox1.Text
@@ -140,41 +142,63 @@ Public Class View_Ledgers
         ListBox10.Items.Clear()
     End Sub
     Private Sub insertLine()
-        Dim DrSide As Integer = 0
-        Dim CrSide As Integer = 0
-        For i As Integer = 0 To ListBox3.Items.Count - 1
-            ListBox3.SetSelected(i, True)
-            DrSide = Val(ListBox3.SelectedItem()) + DrSide
-        Next
-        For i As Integer = 0 To ListBox6.Items.Count - 1
-            ListBox6.SetSelected(i, True)
-            CrSide = Val(ListBox6.SelectedItem()) + CrSide
-        Next
-
-        If ListBox6.Items.Count > ListBox3.Items.Count Then
-            For i As Integer = ListBox3.Items.Count To ListBox6.Items.Count - 2
-                ListBox3.Items.Add("")
-                ListBox2.Items.Add("")
+        MsgBox(DBdate)
+        Dim bool As Boolean = checkYearStatus()
+        If todaysdate = DBdate Then
+            Dim DrSide As Integer = 0
+            Dim CrSide As Integer = 0
+            For i As Integer = 0 To ListBox3.Items.Count - 1
+                ListBox3.SetSelected(i, True)
+                DrSide = Val(ListBox3.SelectedItem()) + DrSide
+            Next
+            For i As Integer = 0 To ListBox6.Items.Count - 1
+                ListBox6.SetSelected(i, True)
+                CrSide = Val(ListBox6.SelectedItem()) + CrSide
             Next
 
-        Else
-            For i As Integer = ListBox6.Items.Count To ListBox3.Items.Count - 2
-                ListBox6.Items.Add("")
-                ListBox5.Items.Add("")
-            Next
-        End If
-        If DrSide > CrSide Then
-            ListBox6.Items.Add(Math.Abs(DrSide - CrSide))
-            ListBox5.Items.Add("TO Bal C/d")
-        Else
-            ListBox3.Items.Add(Math.Abs(DrSide - CrSide))
-            ListBox2.Items.Add("TO Bal C/d")
-        End If
+            If ListBox6.Items.Count > ListBox3.Items.Count Then
+                For i As Integer = ListBox3.Items.Count To ListBox6.Items.Count - 2
+                    ListBox3.Items.Add("")
+                    ListBox2.Items.Add("")
+                Next
 
-        ListBox6.Items.Insert(ListBox6.Items.Count, "_________________________")
-        ListBox6.Items.Insert(ListBox6.Items.Count, drTotal.Text)
-        ListBox3.Items.Insert(ListBox3.Items.Count, "_________________________")
-        ListBox3.Items.Insert(ListBox3.Items.Count, crTotal.Text)
+            Else
+                For i As Integer = ListBox6.Items.Count To ListBox3.Items.Count - 2
+                    ListBox6.Items.Add("")
+                    ListBox5.Items.Add("")
+                Next
+            End If
+            If DrSide > CrSide Then
+                ListBox6.Items.Add(Math.Abs(DrSide - CrSide))
+                ListBox5.Items.Add("TO Bal C/d")
+            Else
+                ListBox3.Items.Add(Math.Abs(DrSide - CrSide))
+                ListBox2.Items.Add("TO Bal C/d")
+            End If
 
+            ListBox6.Items.Insert(ListBox6.Items.Count, "_________________________")
+            ListBox6.Items.Insert(ListBox6.Items.Count, drTotal.Text)
+            ListBox3.Items.Insert(ListBox3.Items.Count, "_________________________")
+            ListBox3.Items.Insert(ListBox3.Items.Count, crTotal.Text)
+        End If
     End Sub
+    Private Function checkYearStatus() As Boolean
+        Dim bool As Boolean
+        Try
+            conn.Close()
+            conn.Open()
+            Dim cmd As MySqlCommand = New MySqlCommand("SELECT * FROM `accountingyear` WHERE Status='TRUE'", conn)
+            Dim dr As MySqlDataReader = cmd.ExecuteReader()
+            If dr.Read() Then
+                DBdate = dr.GetValue(2)
+                bool = dr.GetValue(0)
+            End If
+            conn.Close()
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+        Return bool
+    End Function
 End Class

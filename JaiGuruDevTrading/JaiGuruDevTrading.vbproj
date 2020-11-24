@@ -99,6 +99,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSection\AdminPanel\MessageCreation\MessageBody.Designer.vb">
+      <DependentUpon>MessageBody.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\MessageCreation\MessageBody.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Set Depriciation Method\DepriciationMethod.Designer.vb">
+      <DependentUpon>DepriciationMethod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\Set Depriciation Method\DepriciationMethod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\SetAccountingYear\SetAccountingYear.Designer.vb">
+      <DependentUpon>SetAccountingYear.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSection\AdminPanel\SetAccountingYear\SetAccountingYear.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NavContents\Accounts\Ledger\CreateLedger.Designer.vb">
       <DependentUpon>CreateLedger.vb</DependentUpon>
     </Compile>
@@ -110,6 +128,25 @@
       <DependentUpon>View Ledgers.vb</DependentUpon>
     </Compile>
     <Compile Include="NavContents\Accounts\View Ledgers\View Ledgers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Bills\ChoosePrinter.Designer.vb">
+      <DependentUpon>ChoosePrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Bills\ChoosePrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Bills\ConversionModule.vb" />
+    <Compile Include="NavContents\Bills\Kisan.Designer.vb">
+      <DependentUpon>Kisan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Bills\Kisan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavContents\Bills\Vyapaari.Designer.vb">
+      <DependentUpon>Vyapaari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Bills\Vyapaari.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NavContents\Inventory\AddItems.Designer.vb">
@@ -229,11 +266,26 @@
     <Compile Include="NavContents\Vouchers\Vouchers.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminSection\AdminPanel\MessageCreation\MessageBody.resx">
+      <DependentUpon>MessageBody.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSection\AdminPanel\Set Depriciation Method\DepriciationMethod.resx">
+      <DependentUpon>DepriciationMethod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSection\AdminPanel\SetAccountingYear\SetAccountingYear.resx">
+      <DependentUpon>SetAccountingYear.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Accounts\Ledger\CreateLedger.resx">
       <DependentUpon>CreateLedger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Accounts\View Ledgers\View Ledgers.resx">
       <DependentUpon>View Ledgers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Bills\ChoosePrinter.resx">
+      <DependentUpon>ChoosePrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Bills\Kisan.resx">
+      <DependentUpon>Kisan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Inventory\AddItems.resx">
       <DependentUpon>AddItems.vb</DependentUpon>
@@ -355,6 +407,15 @@
     <None Include="bin\Debug\test.txt" />
     <None Include="Resources\icons8_trash_16px.png" />
     <None Include="Resources\icons8_plus_math_16px.png" />
+    <None Include="Resources\icons8_accounting_24px.png" />
+    <None Include="Resources\icons8_whatsapp_48px.png" />
+    <None Include="Resources\icons8_whatsapp_48px_1.png" />
+    <None Include="Resources\icons8_WhatsApp_64px.png" />
+    <None Include="Resources\icons8_whatsapp_16px.png" />
+    <None Include="Resources\icons8_phone_16px.png" />
+    <None Include="Resources\icons8_phone_50px.png" />
+    <None Include="Resources\icons8_Chat_Message_50px.png" />
+    <None Include="Resources\icons8_group_message_24px.png" />
     <Content Include="Resources\test.txt" />
     <Content Include="Tech-tomatoeslogofinal-01.ico" />
     <Content Include="TextFile1.txt" />
@@ -417,7 +478,6 @@
   <ItemGroup>
     <Folder Include="NavContents\Active Users\" />
     <Folder Include="NavContents\Analytics\" />
-    <Folder Include="NavContents\Bills\" />
     <Folder Include="NavContents\Payroll\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

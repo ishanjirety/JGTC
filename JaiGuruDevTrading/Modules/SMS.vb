@@ -27,4 +27,22 @@ Module SMS
         MsgBox(result)
         Forgot_password.OTP1 = OTP1
     End Sub
+    Public Sub SendMsg(ByVal SendMessage)
+        Dim apikey = "3AuyU/TLlhI-jSmhZxvEyBtfDaTDsLUCqalCjlMzsh" 'API KEY
+        Dim message = SendMessage
+
+        Dim strGet As String
+        Dim Sendername = "TXTLCL"
+        Dim url As String = "https://api.textlocal.in/send/?"
+
+        strGet = url + "apikey=" + apikey _
+        + "&numbers=" + numbers _
+        + "&message=" + WebUtility.UrlEncode(message) _
+        + "&sender=" + Sendername
+
+        Dim webClient As New System.Net.WebClient
+        Dim result As String = webClient.DownloadString(strGet)
+        MsgBox(result)
+        ' Forgot_password.OTP1 = OTP1
+    End Sub
 End Module
