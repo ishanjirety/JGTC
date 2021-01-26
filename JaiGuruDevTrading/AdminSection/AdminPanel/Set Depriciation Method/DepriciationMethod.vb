@@ -3,7 +3,6 @@ Public Class DepriciationMethod
     Private Sub Btn_SET_Click(sender As Object, e As EventArgs) Handles Btn_SET.Click
         If GetEntryStatus() = False Then
             MsgBox("YOU CANNOT CHANGE DEPRICIATION METHOD ONCE UPDATED", MsgBoxStyle.Critical)
-
         Else
             MakeMethodEntry()
         End If

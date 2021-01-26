@@ -41,7 +41,6 @@ Partial Class Form1
         Me.Btn_BS = New System.Windows.Forms.Button()
         Me.Btn_CB = New System.Windows.Forms.Button()
         Me.Btn_dep = New System.Windows.Forms.Button()
-        Me.Btn_deb = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.ViewLedger = New System.Windows.Forms.Button()
         Me.PannelBill = New System.Windows.Forms.Panel()
@@ -111,9 +110,9 @@ Partial Class Form1
         Me.Vouchers.Controls.Add(Me.Btn_Jvoucher)
         Me.Vouchers.Controls.Add(Me.Btn_SVoucher)
         Me.Vouchers.Controls.Add(Me.Btn_PurVoucher)
-        Me.Vouchers.Location = New System.Drawing.Point(0, 544)
+        Me.Vouchers.Location = New System.Drawing.Point(0, 464)
         Me.Vouchers.Name = "Vouchers"
-        Me.Vouchers.Size = New System.Drawing.Size(216, 42)
+        Me.Vouchers.Size = New System.Drawing.Size(216, 149)
         Me.Vouchers.TabIndex = 17
         '
         'Button4
@@ -245,7 +244,6 @@ Partial Class Form1
         Me.Accounts.Controls.Add(Me.Btn_BS)
         Me.Accounts.Controls.Add(Me.Btn_CB)
         Me.Accounts.Controls.Add(Me.Btn_dep)
-        Me.Accounts.Controls.Add(Me.Btn_deb)
         Me.Accounts.Controls.Add(Me.Button5)
         Me.Accounts.Controls.Add(Me.ViewLedger)
         Me.Accounts.Location = New System.Drawing.Point(1, 190)
@@ -262,7 +260,7 @@ Partial Class Form1
         Me.Btn_Gst.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Gst.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_Gst.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Gst.Location = New System.Drawing.Point(0, 216)
+        Me.Btn_Gst.Location = New System.Drawing.Point(0, 180)
         Me.Btn_Gst.Name = "Btn_Gst"
         Me.Btn_Gst.Size = New System.Drawing.Size(214, 36)
         Me.Btn_Gst.TabIndex = 28
@@ -278,7 +276,7 @@ Partial Class Form1
         Me.Btn_BS.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_BS.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_BS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_BS.Location = New System.Drawing.Point(0, 180)
+        Me.Btn_BS.Location = New System.Drawing.Point(0, 144)
         Me.Btn_BS.Name = "Btn_BS"
         Me.Btn_BS.Size = New System.Drawing.Size(214, 36)
         Me.Btn_BS.TabIndex = 27
@@ -294,7 +292,7 @@ Partial Class Form1
         Me.Btn_CB.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CB.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_CB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_CB.Location = New System.Drawing.Point(0, 144)
+        Me.Btn_CB.Location = New System.Drawing.Point(0, 108)
         Me.Btn_CB.Name = "Btn_CB"
         Me.Btn_CB.Size = New System.Drawing.Size(214, 36)
         Me.Btn_CB.TabIndex = 26
@@ -310,28 +308,12 @@ Partial Class Form1
         Me.Btn_dep.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_dep.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
         Me.Btn_dep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_dep.Location = New System.Drawing.Point(0, 108)
+        Me.Btn_dep.Location = New System.Drawing.Point(0, 72)
         Me.Btn_dep.Name = "Btn_dep"
         Me.Btn_dep.Size = New System.Drawing.Size(214, 36)
         Me.Btn_dep.TabIndex = 25
         Me.Btn_dep.Text = "Depriciation"
         Me.Btn_dep.UseVisualStyleBackColor = True
-        '
-        'Btn_deb
-        '
-        Me.Btn_deb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Btn_deb.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Btn_deb.FlatAppearance.BorderSize = 0
-        Me.Btn_deb.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_deb.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_deb.Image = Global.JaiGuruDevTrading.My.Resources.Resources.icons8_general_ledger_30
-        Me.Btn_deb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_deb.Location = New System.Drawing.Point(0, 72)
-        Me.Btn_deb.Name = "Btn_deb"
-        Me.Btn_deb.Size = New System.Drawing.Size(214, 36)
-        Me.Btn_deb.TabIndex = 24
-        Me.Btn_deb.Text = "Debitor"
-        Me.Btn_deb.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -842,5 +824,4 @@ Partial Class Form1
     Friend WithEvents Btn_BS As Button
     Friend WithEvents Btn_CB As Button
     Friend WithEvents Btn_dep As Button
-    Friend WithEvents Btn_deb As Button
 End Class

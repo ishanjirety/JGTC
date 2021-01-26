@@ -1,1 +1,1 @@
-server=localhost;PORT=3306;username=root;database=jgtc
+server=mysql.stackcp.com;port=54697;username=administrator-9ae8;password=toor12345678;database=jgtc123-313137528e

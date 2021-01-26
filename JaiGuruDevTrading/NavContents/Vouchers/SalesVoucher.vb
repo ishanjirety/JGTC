@@ -28,8 +28,8 @@ Public Class SalesVoucher
         If txtAmt.Text <> Nothing And TextBox1.Text <> Nothing And txtItemName.Text <> Nothing And txtQuantity.Text <> Nothing Then
             bool = checkLedger(TextBox1.Text)
             If bool = False Then
-                GetEntryStatus(TextBox1.Text)
-                MakeVoucherEntrySales(type, txtDate.Text, TextBox1.Text, TotalAmount.Text, "BY")
+                GetEntryStatus(TextBox1.Text.ToLower())
+                MakeVoucherEntrySales(type, txtDate.Text, TextBox1.Text.ToLower(), TotalAmount.Text, "BY")
                 If status = "YES" Then
                     Dim bool1 As Boolean = check(txtItemName.Text)
                     If bool1 = False Then
@@ -78,7 +78,7 @@ Public Class SalesVoucher
         Try
             conn.Close()
             conn.Open()
-            Dim str As String = "SELECT Category from ledgernames where Name='" + TextBox1.Text + "'"
+            Dim str As String = "SELECT Category from ledgernames where Name='" + TextBox1.Text.ToLower() + "'"
             Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
             Dim dr As MySqlDataReader = cmd.ExecuteReader()
             If dr.Read() Then
@@ -88,7 +88,7 @@ Public Class SalesVoucher
             If category = "Sundry Debtors" Then
                 conn.Close()
                 conn.Open()
-                Dim txt As String = "SELECT ADDRESS,MOBILE,BANKDETAILS from ledgernames where Name='" + TextBox1.Text + "'"
+                Dim txt As String = "SELECT ADDRESS,MOBILE,BANKDETAILS from ledgernames where Name='" + TextBox1.Text.ToLower() + "'"
                 Dim txtCmd As MySqlCommand = New MySqlCommand(txt, conn)
                 Dim txtdr As MySqlDataReader = txtCmd.ExecuteReader()
                 If txtdr.Read() Then

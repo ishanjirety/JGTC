@@ -117,6 +117,12 @@
     <Compile Include="AdminSection\AdminPanel\SetAccountingYear\SetAccountingYear.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainScreen\buffer.Designer.vb">
+      <DependentUpon>buffer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen\buffer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NavContents\Accounts\Ledger\CreateLedger.Designer.vb">
       <DependentUpon>CreateLedger.vb</DependentUpon>
     </Compile>
@@ -251,6 +257,12 @@
     <Compile Include="NavContents\Inventory\ViewInventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NavContents\Vouchers\ContraVoucher.Designer.vb">
+      <DependentUpon>ContraVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NavContents\Vouchers\ContraVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NavContents\Vouchers\PurchaseVoucher.Designer.vb">
       <DependentUpon>PurchaseVoucher.vb</DependentUpon>
     </Compile>
@@ -274,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSection\AdminPanel\SetAccountingYear\SetAccountingYear.resx">
       <DependentUpon>SetAccountingYear.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen\buffer.resx">
+      <DependentUpon>buffer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Accounts\Ledger\CreateLedger.resx">
       <DependentUpon>CreateLedger.vb</DependentUpon>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Inventory\ViewInventory.resx">
       <DependentUpon>ViewInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavContents\Vouchers\ContraVoucher.resx">
+      <DependentUpon>ContraVoucher.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavContents\Vouchers\PurchaseVoucher.resx">
       <DependentUpon>PurchaseVoucher.vb</DependentUpon>
@@ -416,7 +434,13 @@
     <None Include="Resources\icons8_phone_50px.png" />
     <None Include="Resources\icons8_Chat_Message_50px.png" />
     <None Include="Resources\icons8_group_message_24px.png" />
+    <None Include="Resources\25.gif" />
+    <None Include="Resources\468.gif" />
     <Content Include="Resources\test.txt" />
+    <None Include="Resources\wait.jpg" />
+    <None Include="Resources\wait1.jpg" />
+    <None Include="Resources\wait2.jpg" />
+    <None Include="Resources\wait3.jpg" />
     <Content Include="Tech-tomatoeslogofinal-01.ico" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\icons8_square_240px_3.png" />

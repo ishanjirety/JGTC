@@ -32,10 +32,10 @@ Public Class PurchaseVoucher
 
     Private Sub btn_create_Click(sender As Object, e As EventArgs) Handles btn_create.Click
         If txtAmt.Text <> Nothing And TextBox1.Text <> Nothing And txtItemName.Text <> Nothing And txtQuantity.Text <> Nothing Then
-            bool = checkLedger(TextBox1.Text)
+            bool = checkLedger(TextBox1.Text.ToLower())
             If bool = False Then
-                GetEntryStatus(TextBox1.Text)
-                MakeVoucherEntry(type, txtDate.Text, TextBox1.Text, TotalAmount.Text, "TO")
+                GetEntryStatus(TextBox1.Text.ToLower())
+                MakeVoucherEntry(type, txtDate.Text, TextBox1.Text.ToLower(), TotalAmount.Text, "TO")
                 If status = "YES" Then
                     Dim bool1 As Boolean = check(txtItemName.Text)
                     If bool1 = False Then
@@ -175,7 +175,7 @@ Public Class PurchaseVoucher
     Private Sub makeledger()
         Create_Led.Show()
         Create_Led.OpenedBy = "PV"
-        Create_Led.LedNAME.Text = TextBox1.Text
+        Create_Led.LedNAME.Text = TextBox1.Text.ToLower()
         Create_Led.FormBorderStyle = FormBorderStyle.FixedSingle
     End Sub
     Private Sub btn_clr_Click(sender As Object, e As EventArgs) Handles btn_clr.Click
@@ -243,5 +243,9 @@ Public Class PurchaseVoucher
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

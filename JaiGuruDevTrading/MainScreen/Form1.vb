@@ -1,5 +1,8 @@
 ﻿Imports System.Net
+Imports MySql.Data.MySqlClient
 Imports System.Reflection
+'server=mysql.stackcp.com;port=54697;username=administrator-9ae8;password=toor12345678;database=jgtc123-313137528e
+'server=mysql.stackcp.com;port=54697;username=jgtc123-313137528e;password=toor12345678;database=jgtc123-313137528e
 Public Class Form1
     '<-----------Pannel Style------------>
     Dim pannelWidth
@@ -22,6 +25,13 @@ Public Class Form1
         DoubleBufferedPanel(Panel3, True)
         DoubleBufferedPanel(Panel4, True)
         DoubleBufferedPicture(PictureBox1, True)
+        buffer.BringToFront()
+        buffer.Visible = True
+        buffer.Enabled = True
+        EndYear()
+        buffer.SendToBack()
+        buffer.Visible = False
+        buffer.Enabled = False
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Panel2.Show()
@@ -239,14 +249,6 @@ Public Class Form1
     Private Sub RetailBtn_MouseLeave(sender As Object, e As EventArgs) Handles RetailBtn.MouseLeave
         RetailBtn.ForeColor = Color.Black
     End Sub
-    Private Sub Btn_deb_MouseEnter(sender As Object, e As EventArgs)
-        Btn_deb.ForeColor = Color.DodgerBlue
-    End Sub
-
-    Private Sub Btn_deb_MouseLeave(sender As Object, e As EventArgs)
-        Btn_deb.ForeColor = Color.Black
-    End Sub
-
     Private Sub btn_dep_MouseEnter(sender As Object, e As EventArgs)
         Btn_dep.ForeColor = Color.DodgerBlue
     End Sub
@@ -399,8 +401,39 @@ Public Class Form1
             .Show()
         End With
     End Sub
-
-    Private Sub Btn_dep_Click(sender As Object, e As EventArgs) Handles Btn_dep.Click
+    Private Sub EndYear()
+        Dim todaysdate As String = String.Format("{0:dd-MM-yyyy}", DateTime.Now)
+        Dim DBDate As String
+        Try
+            conn.Close()
+            conn.Open()
+            Dim CMD_STR As String = "SELECT END FROM `accountingyear`"
+            Dim CMD As MySqlCommand = New MySqlCommand(CMD_STR, conn)
+            Dim DR As MySqlDataReader = CMD.ExecuteReader()
+            If DR.Read() Then
+                DBDate = DR.GetValue(0)
+            End If
+            'MsgBox(todaysdate + "  " + DBDate)
+            'MsgBox(String.Compare(todaysdate.ToString().Trim(), DBDate.ToString().Trim()))
+            If String.Compare(todaysdate.ToString().Trim(), DBDate.ToString().Trim()) = 0 Then
+                conn.Close()
+                conn.Open()
+                Dim NewEndDate As String = DateAdd("m", 12, DBDate)
+                Dim NewStartDate As String = DateAdd("d", 1, DBDate)
+                Try
+                    Dim CMD_STR_Date As String = "UPDATE `accountingyear` SET START='" + NewStartDate + "' , END='" + NewEndDate + "' WHERE END='" + DBDate + "'"
+                    Dim CMD_Date As MySqlCommand = New MySqlCommand(CMD_STR_Date, conn)
+                    Dim DR_DATE As MySqlDataReader = CMD_Date.ExecuteReader()
+                    MsgBox("NEW ACCOUNTING YEAR UPDATED : " + NewStartDate + "  " + NewEndDate)
+                Catch ex As Exception
+                    MsgBox("AN ERROR OCCURED : " + ex.Message)
+                End Try
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox("AN ERROR OCCURED : " + ex.Message)
+            conn.Close()
+        End Try
 
     End Sub
 End Class

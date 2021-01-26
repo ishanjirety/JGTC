@@ -21,7 +21,8 @@ Module LedgerManagement
         conn.Close()
         conn.Open()
         Try
-            Dim str As String = "INSERT INTO `ledgernames` (`Name`, `AffectsInventory`, `CUSNAME`, `ADDRESS`, `MOBILE`, `BANKDETAILS`,`Category`,`DateOfCreation`) VALUES ('" + NAME + "', '" + AFFECTSINV + "', '" + CUSNAME + "', '" + ADDRESS + "', '" + MOBILE + "', '" + BANKDETAILS + "','" + category + "','" + DateTime.Now + "')"
+            MsgBox(NAME + "refLed")
+            Dim str As String = "INSERT INTO `ledgernames` (`Name`, `AffectsInventory`, `CUSNAME`, `ADDRESS`, `MOBILE`, `BANKDETAILS`,`Category`,`DateOfCreation`) VALUES ('" + NAME + "', '" + AFFECTSINV + "', '" + CUSNAME + "', '" + ADDRESS + "', '" + MOBILE + "', '" + BANKDETAILS + "','" + Category + "','" + DateTime.Now + "')"
             Dim cmd As MySqlCommand = New MySqlCommand(str, conn)
             Dim dr As MySqlDataReader = cmd.ExecuteReader
             conn.Close()

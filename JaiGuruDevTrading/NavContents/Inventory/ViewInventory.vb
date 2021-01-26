@@ -111,4 +111,8 @@ Public Class ViewInventory
             conn.Close()
         End Try
     End Sub
+
+    Private Sub Edit_Paint(sender As Object, e As PaintEventArgs) Handles Edit.Paint
+
+    End Sub
 End Class
